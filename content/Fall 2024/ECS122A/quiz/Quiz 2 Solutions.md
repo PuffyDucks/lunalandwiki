@@ -20,18 +20,24 @@ what i usually do w these nested loops is find the number of iterations each loo
 ![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010164302.png]]
 questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what j does here, it adds 1 to j every inner for loop; this causes j to increment by 2 instead of 1, which is still O(n). for i, at the end of the inner j for loop, it has increased by n/2. This means the outer for loop can only run twice, which is still an O(1) operation. 
 
-other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled w on **hw1 problem 5.f**
+other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: **hw1 problem 5.f**
 ![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010165621.png]]
 lets start with loop analysis on this one. i iterates from 1 to n, so thats O(n). j iterates from 1 to i$^2$ and is thus O(n$^2$). then, the innermost loop iterates k from 0 to j, which is again O(n$^2$). however, the if statement in the 2nd loop prevents this from being the same as problem e. the innermost loop is nested in an if statement which checks if j%i == 0. this means while j iterates O(n$^2$) times, its contents only run every $i$ times, which is linked to O(n). then, we can divide to determine j's loop only runs its content O(n) times, not O(n$^2$). Then we can multiply these nests and find that the runtime of this code is O(n$^4$).
 ### 2) Solve via recurrence tree, and **confirm via substitution.**
 > [!tip] Formulas!!
 > Here are some formulas that are super useful for solving **geometric series**!! ^^
 > The main formula u should know is
-> $$\sum\limits_{k=0}^{n}ar^k=\dfrac{a(1-r^{n+1})}{1-r}$$
+> $$
+> \sum\limits_{k=0}^{n}ar^k=\dfrac{a(1-r^{n+1})}{1-r}
+> $$
 > When $|r|<1$, then as $n$ approaches $\infty$ we know that  
-> $$\sum\limits_{k=0}^{\infty}ar^k=\dfrac{a}{1-r}$$
+> $$
+> \sum\limits_{k=0}^{\infty}ar^k=\dfrac{a}{1-r}
+> $$
 > Then, when $r=1$ aka there's no exponent, then
->  $$\sum\limits_{k=0}^{n}a=a(n+1)$$
+> $$
+> \sum\limits_{k=0}^{n}a=a(n+1)
+> $$
 > As a bonus heres **Masters Theorem**. Makes lots of problems so easy :D
 For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$,
 if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
@@ -42,23 +48,35 @@ if $a<b^d$ then the recurrence is $O(n^d)$.
 Work: $5n^3$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
-$$\begin{align}
+$$
+\begin{align}
 \sum\limits_{k=0}^{log_3(n)}5n^3&=(1+log_3(n))(5n^3)\\
 &=5n^3log_3(n)+5n^3\\
 &=O(n^3log(n))
-\end{align}$$
+\end{align}
+$$
 **Substitution**
 Hypothesis: $T(n)=O(n^3log(n))$
 Assuming $T(n)\leq cn^3log(n)$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\frac{k}{3}\right)\leq c(\frac{k}{3})^3log\left(\frac{k}{3}\right)$. Thus, we know that
-$$T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^3\leq ck^3log\left(\dfrac{k}{3}\right)+5k^3$$
+$$
+T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^3\leq ck^3log\left(\dfrac{k}{3}\right)+5k^3
+$$
 From this, we want to prove that 
-$$ck^3log\left(\frac{k}{3}\right)+5k^3\leq ck^3log(k)$$ 
+$$
+ck^3log\left(\frac{k}{3}\right)+5k^3\leq ck^3log(k)
+$$
 We can divide by $k^3$ to rewrite the inequality as
-$$c\cdot\log\left(\dfrac{k}{3}\right)+5\leq c\cdot log(k)$$
+$$
+c\cdot\log\left(\dfrac{k}{3}\right)+5\leq c\cdot log(k)
+$$
 Logarithm rules further simplify this inequality to
-$$c\cdot log(k) - c\cdot log(3) + 5 \leq c\cdot log(k)$$
+$$
+c\cdot log(k) - c\cdot log(3) + 5 \leq c\cdot log(k)
+$$
 By cancelling out $c\cdot log(k)$ and treating the log base as 3 we can solve for $c$ and get
-$$c\geq5$$
+$$
+c\geq5
+$$
 Thus, $T(n)=O(n^3log(n))$ is proven by definition of big O as $T(n)\leq cn^3log(n)$ for $c=5$ and $n_0=1$
 #### T(n)=27T(n/3)+5n^2  
 ![[Fall 2024/ECS122A/quiz/src/II-II-B.excalidraw.svg|600]]
@@ -82,23 +100,37 @@ $$
 
 Hypothesis: $T(n)=O(n^3)$
 Assuming $T(n)\leq cn^3$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\dfrac{k}{3}\right)\leq \dfrac{c}{27}k^3$. Thus, we know that
-$$T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^2 \leq ck^3+5k^2$$
+$$
+T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^2 \leq ck^3+5k^2
+$$
 From this, we want to prove that 
-$$ck^3+5k^2\leq ck^3$$
+$$
+ck^3+5k^2\leq ck^3
+$$
 We can cancel out $ck^3$ from both sides and end with
-$$5k^2\leq0$$
+$$
+5k^2\leq0
+$$
 >[!failure] ermmmm what the flip!!
 > This inequality can never hold true for any non-zero values of $k$! Despite this, a failed substitution proof does not indicate an incorrect hypothesis. Sometimes a new hypothesis must be formed where a lower degree term is subtracted from the original term. Below is an application of such, where $n^2$ is subtracted to deal with the $5k^2$.
 
 Hypothesis: $T(n)=O(n^3-n^2)$
 Assuming $T(n)\leq cn^3-cn^2$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\dfrac{k}{3}\right)\leq \dfrac{c}{27}k^3-\dfrac{c}{9}k^2$. Thus, we know that
-$$T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^2 \leq ck^3-3ck^2+5k^2$$
+$$
+T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^2 \leq ck^3-3ck^2+5k^2
+$$
 From this, we want to prove that
-$$ck^3-3ck^2+5k^2\leq ck^3$$
+$$
+ck^3-3ck^2+5k^2\leq ck^3
+$$
 We can cancel out the $ck^3$ from both sides and get
-$$5k^2\leq3ck^2$$
+$$
+5k^2\leq3ck^2
+$$
 This time, we can solve for $c$ and get the inequality
-$$c\geq \dfrac{5}{3}$$
+$$
+c\geq \dfrac{5}{3}
+$$
 As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{4}$ and $n_0=1$.
 #### T(n)=27T(n/3)+5n\^4------------------------------
 ![[Fall 2024/ECS122A/quiz/src/II-II-C.excalidraw.svg|600]]
@@ -118,13 +150,21 @@ $$
 **Substitution**
 Hypothesis: $T(n)=O(n^4)$
 Assuming $T(n)\leq cn^4$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\dfrac{k}{3}\right)\leq \dfrac{c}{81}k^4$. Thus, we know that
-$$T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^4\leq\dfrac{c}{3}k^4+5k^4$$
+$$
+T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^4\leq\dfrac{c}{3}k^4+5k^4
+$$
 From this, we want to prove that 
-$$\dfrac{c}{3}k^4+5k^4\leq ck^4$$
+$$
+\dfrac{c}{3}k^4+5k^4\leq ck^4
+$$
 We can divide by $k^4$ to rewrite the inequality as 
-$$\dfrac{c}{3}+5\leq c$$
+$$
+\dfrac{c}{3}+5\leq c
+$$
 Then by solving for $c$, we get
-$$c\geq\dfrac{15}{2}$$
+$$
+c\geq\dfrac{15}{2}
+$$
 Thus, $T(n)=O(n^4)$ is proven by definition of big O as $T(n)\leq cn^4$ for $c=7.5$ and $n_0=1$.
 ### 3) Create a linear algorithm that adds an array of numbers, and analyze it. 
 >[!abstract]  Note From Miku
