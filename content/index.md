@@ -9,15 +9,15 @@ haiiiii hihihihi hiiiiii :3 haiiii hiii haiii ^-^ thanks for visiting my website
 
 # OK BORING STUFF OVER LOOK AT MY CAT
 
-![[Pasted image 20241011125258.png | 400]]
+![[cat1.png | 400]]
 
 meowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeow
 
-![[Pasted image 20241011125304.png | 400]]
+![[cat2.png | 400]]
 
 her name is luma!!!! ~1 year old now. 
 
-![[Pasted image 20241011125310.png | 400]]
+![[cat3.png | 600]]
 
 ISNT SHE SO CUTE HKSDJLKSDJFSKLDFKSLDJFKSDF
 

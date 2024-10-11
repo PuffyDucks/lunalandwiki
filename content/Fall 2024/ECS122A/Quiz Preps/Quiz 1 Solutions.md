@@ -35,7 +35,7 @@ Therefore, for $c=\frac{5}{2}$ and $n_0=1$ we know that $5n^2log(n)+4n^2+3\geq c
 
 As we have proven that $T(n)=O(g(n))$ and $T(n)=\Omega(g(n))$, we have also proved $T(n)=\Theta(g(n))$.
 
-## 2) Prove T(n)=O(g(n)) via limit lemma.
+## 2) Prove T(n)=O(g(n)) via limit lemma
 To prove this, we must show that $\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}\leq c$. 
 $$
 \displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(5n^2log(n)+4n^2+3)}{\dfrac{d}{dn}(2n^2log(n))}
@@ -91,7 +91,7 @@ $$
 =0
 $$
 The expression approaches a constant, so we have therefore proven that $log(n)=O(n^x)$ for some $x$.  
-## 4) Recurrences.
+## 4) Recurrences
 v3 update - I asked and she said add base cases so I have updaded the pseudo code to include  base cases.
 ### a)Provide a Sample code for the recurrences below.
 #### i) T(n)=T(n/5)+T(3n/5)+n
@@ -125,8 +125,8 @@ foo(int n)
     for(i=1 to n^3)
            print "meow :3"
 ```
-## Problem 5;
-v3 update: the lack of a base case here was an error. treat the code as if there was an 
+## Problem 5
+v3 update: the lack of a base case here was an error. treat the code as if there were one
 ### Given code can you write the recurrence
 ```
 foo( int n)  
