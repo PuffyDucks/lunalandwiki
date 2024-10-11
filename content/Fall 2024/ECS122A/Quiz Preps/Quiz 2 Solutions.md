@@ -14,22 +14,27 @@
 ## hw1 problem 5.e
 ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010152949.png]]
 
-what i usually do w these nested loops is find the number of iterations each loop has in O(n) form. so at the top we have a loop from i to n. obviously this is O(n). after that, the j goes from 0 to i$^2$. we just determined i to iterate O(n) times. so we can square that and determine j iterates O(n$^2$) times. then we have k which loops from 0 to j. we just determined j to iterate O(n$^2$) times, so k also iterates O(n$^2$) times. finally, inside that loop, `++sum` is O(1). multiply all those numbers together and we get O(n$^4$).
+what i usually do w these nested loops is find the number of iterations each loop/function has in $O(n)$ form. so at the top we have a for loop iterating `i` from 0 to n. obviously this makes `i`'s iterations $O(n)$. 
+
+then, the inner loop iterates `j` from 0 to `i`$^2$. we just determined i to iterate $O(n)$ times, so we can square that to say j iterates O(n$^2$) times. 
+
+then, we have `k` looping from 0 to j. since `j` to iterates $O(n^2)$ times, this means `k` also iterates $O(n^2)$ times. 
+finally, within the innermost loop is a $O(1)$ line, `++sum`. multiply all those numbers together and we get $O(n)\cdot O(n^2)\cdot O(n^2)\cdot O(1)=O(n^5)$.
 
 > [!warning] careful ‼️
-> watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. up next ill go over examples of some things to pay attention for.
+> watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. below ill go over two examples of some things to pay attention for.
 
 ## hw1 problem 10
 ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010164302.png]]
 
-questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what j does here, it adds 1 to j every inner for loop; this causes j to increment by 2 instead of 1, which is still O(n). for i, at the end of the inner j for loop, it has increased by n/2. This means the outer for loop can only run twice, which is still an O(1) operation. 
+questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what `j` does here, it adds 1 to `j` every **inner** for loop iteration; this causes `j` to increment by 2 instead of 1, which is still $O(n)$. then, at the end of the inner for loop, `i` has increased by n/2 due to the line `i++`. This means the **outer** for loop only runs exactly twice, which is an O(1) operation. 
 
 other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: 
 
 ## hw1 problem 5.f
 ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010165621.png]]
 
-lets start with loop analysis on this one. i iterates from 1 to n, so thats O(n). j iterates from 1 to i$^2$ and is thus O(n$^2$). then, the innermost loop iterates k from 0 to j, which is again O(n$^2$). however, the if statement in the 2nd loop prevents this from being the same as problem e. the innermost loop is nested in an if statement which checks if j%i == 0. this means while j iterates O(n$^2$) times, its contents only run every $i$ times, which is linked to O(n). then, we can divide to determine j's loop only runs its content O(n) times, not O(n$^2$). Then we can multiply these nests and find that the runtime of this code is O(n$^4$).
+lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $O(n)$. `j` iterates from 1 to `i`$^2$ and is thus $O(n^2)$. the innermost loop iterates `k` from 0 to `j`, which is again $O(n^2)$. however, an if statement in the 2nd loop prevents this problem from being identical to problem e. the innermost loop is nested in an if statement which checks if `j % i == 0`. this means although `j` iterates $O(n^2)$ times, its contents only run every `i` times. using this information, we can divide `j`'s iterations by `i`'s iterations to determine the second loop's content only runs $O(n)$ times, not $O(n^2)$. we can multiply these values and calculate the runtime as $O(n)\cdot \dfrac{O(n^2)}{O(n)}\cdot O(n^2)\cdot O(1)=O(n^4)$.
 # 2) Solve via recurrence tree, and **confirm via substitution.**
 > [!tip] Formulas!!
 > Here are some formulas that are super useful for solving **geometric series**!! ^^
