@@ -1,3 +1,5 @@
+[QUIZ PREP QUESTIONS TO BE FOUND HERE](https://canvas.ucdavis.edu/courses/902574/pages/test-prep-page) 
+
 **Quiz 1 Prep - There are no solutions to these they are hints for the test. Work together or with the me or the TAs to solve these.**
 
 > [!question] whats that??

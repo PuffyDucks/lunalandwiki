@@ -1,3 +1,5 @@
+[QUIZ PREP QUESTIONS TO BE FOUND HERE](https://canvas.ucdavis.edu/courses/902574/pages/test-prep-page) 
+
 > [!info] v1 Patch Notes - Oct. 9, 5:49 am
 > hey losers :3 !!! its 5:49 am i didnt check any of my work pls ping me with any errors so i can revise a v2, , ,,, i should just host a website for these.... im hungry.. . could go for a warm bowl of soondubu rn. god i have to wake up at 6:30 im cooked time to faint in bed. miku out!! 🛌🌙
 > 
