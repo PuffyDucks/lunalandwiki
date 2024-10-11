@@ -134,7 +134,7 @@ foo( int n)
     for( i=1 to n^2)   
            print hello  
 ```
-fuck man just look at it i guess
+idk man just look at it i guess
 $T(n)=T(n/2)+n^2$
 #### Problem 6.)  
 ##### Write  pseudocode that lists the subsets of an array of ints.  

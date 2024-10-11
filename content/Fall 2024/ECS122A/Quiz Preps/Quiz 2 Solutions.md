@@ -3,10 +3,10 @@
 > 
 > ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241009020843.png|200]]
 
-> [!info] v2 Patch Notes - Oct 11, 2:45 am
-> hi i filled out question 1 with some explanation of previous problems, did some fixups throughout the doc to make explanations clearer, added more info and fixed an error in question 2.b, added some formulas uhh oh yeah i made the soondubu i was talking about in v1 lol looks like im starting a mini blog in the patch notes hehehehe oh yeah actual website now yippeeeeeeeeeeeeeeeee!!!!!
+> [!info] v2 Patch Notes - Oct 11, 3:25 am
+> filled out q1 w/ explanation of prev problems, added to question 2.b, included some formulas, uhhhh i made the soondubu i talked abt in v1 notes lol oh yeah we got an actual website now yippeeeeeeeeeeeeeeeee!!!!!
 > 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010202319.png| 300]]
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.png | 300]]
 ### 1) Code analysis like quiz1 or hw1 or any class code analysis 
 > [!abstract] Note From Miku
 > uhh uhhhhnmmm ermmm she didnt really give problems here... so instead i will show you guys my thought process with the hw ones...
@@ -26,7 +26,9 @@ what i usually do w these nested loops is find the number of iterations each loo
 
 questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what j does here, it adds 1 to j every inner for loop; this causes j to increment by 2 instead of 1, which is still O(n). for i, at the end of the inner j for loop, it has increased by n/2. This means the outer for loop can only run twice, which is still an O(1) operation. 
 
-other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: **hw1 problem 5.f**
+other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: 
+
+**hw1 problem 5.f**
 
 ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010165621.png]]
 
