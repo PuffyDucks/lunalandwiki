@@ -6,7 +6,7 @@
 > [!info] v2 Patch Notes - Oct 11, 3:25 am
 > filled out q1 w/ explanation of prev problems, added to question 2.b, included some formulas, uhhhh i made the soondubu i talked abt in v1 notes lol oh yeah we got an actual website now yippeeeeeeeeeeeeeeeee!!!!!
 > 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.png | 300]]
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.jpg| 300]]
 ### 1) Code analysis like quiz1 or hw1 or any class code analysis 
 > [!abstract] Note From Miku
 > uhh uhhhhnmmm ermmm she didnt really give problems here... so instead i will show you guys my thought process with the hw ones...
