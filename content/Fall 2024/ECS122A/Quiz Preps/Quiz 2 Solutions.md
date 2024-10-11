@@ -145,7 +145,7 @@ This time, we can solve for $c$ and get the inequality
 $$
 c\geq \dfrac{5}{2}
 $$
-As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{4}$ and $n_0=1$.
+As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{2}$ and $n_0=1$.
 ## T(n)=27T(n/3)+5n\^4
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-C.excalidraw.svg|600]]
 
@@ -180,7 +180,7 @@ Then by solving for $c$, we get
 $$
 c\geq\dfrac{15}{2}
 $$
-Thus, $T(n)=O(n^4)$ is proven by definition of big O as $T(n)\leq cn^4$ for $c=7.5$ and $n_0=1$.
+Thus, $T(n)=O(n^4)$ is proven by definition of big O as $T(n)\leq cn^4$ for $c=\dfrac{15}{2}$ and $n_0=1$.
 # 3) Create a linear algorithm that adds an array of numbers, and analyze it. 
 >[!abstract]  Note From Miku
 > uhhhh we already did this for hw but i think its to set up for problem 4. ill just copy my prev code lol
