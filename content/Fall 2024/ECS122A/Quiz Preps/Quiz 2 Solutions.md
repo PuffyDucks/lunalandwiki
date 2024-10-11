@@ -135,15 +135,15 @@ T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^2 \leq ck^3-3ck^2+5k^2
 $$
 From this, we want to prove that
 $$
-ck^3-3ck^2+5k^2\leq ck^3
+ck^3-3ck^2+5k^2\leq ck^3-ck^2
 $$
-We can cancel out the $ck^3$ from both sides and get
+We can cancel out $ck^3$ from both sides and combine like terms to get
 $$
-5k^2\leq3ck^2
+5k^2\leq2ck^2
 $$
 This time, we can solve for $c$ and get the inequality
 $$
-c\geq \dfrac{5}{3}
+c\geq \dfrac{5}{2}
 $$
 As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{4}$ and $n_0=1$.
 ## T(n)=27T(n/3)+5n\^4
