@@ -1,11 +1,16 @@
 **Quiz 1 Prep - There are no solutions to these they are hints for the test. Work together or with the me or the TAs to solve these.**
-no solutions?!?1? ummm live miku reaction
-![[Fall 2024/ECS122A/quiz/src/Pasted image 20241002205019.png]]
 
-anyways heres the quiz 1 solutions v3 by the one and only real hatsune miku 
-#### patch notes:
-**v2** - fixed up problem 6 code stuff and added comments
-**v3** - i asked questions abt stuff i wasnt sure about after lecture today oct 3rd so i hope this doc is correct now. question 4 i added base cases. question 5 not having a base case was in fact an oversight. oh and for question 1 i asked about log bases, we can use any base to our convenience if not specified by her.  
+> [!question] whats that??
+> hmmm no solutions she says?!?1? ummm live miku reaction :3
+> 
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241002205019.png]]
+> 
+> anyways heres the quiz 1 solutions v3 by the one and only real hatsune miku 
+
+> [!info] **patch notes**
+> **v2** - fixed up problem 6 code stuff and added comments
+> 
+> **v3** - i asked questions abt stuff i wasnt sure about after lecture today oct 3rd so i hope this doc is correct now. question 4 i added base cases. question 5 not having a base case was in fact an oversight. oh and for question 1 i asked about log bases, we can use any base to our convenience if not specified by her.  
 
 ### Big-0, Omega and Theta by definition
 
@@ -13,44 +18,78 @@ anyways heres the quiz 1 solutions v3 by the one and only real hatsune miku
 To prove this, we must show that $T(n)=O(g(n))$ as well as $T(n)=\Omega(g(n))$.
 
 First, let's prove that $T(n)=O(g(n))$. We know the following is true for $n\geq10$:
-$$5n^2log(n)+4n^2+3\leq5n^2log(n)+4n^2log(n)+3n^2log(n)$$
+$$
+5n^2log(n)+4n^2+3\leq5n^2log(n)+4n^2log(n)+3n^2log(n)
+$$
 We choose $n_0=10$ because $log(10)=1$, and to ensure the new expression is greater or equal, terms must be multiplied by a value $\geq1$. The above expression can then be simplified as
-$$=12n^2log(n)$$
+$$
+=12n^2log(n)
+$$
 Thus, for $c=6$ and $n_0=10$ we know that $5n^2log(n)+4n^2+3\leq c(2n^2log(n))$, and therefore $T(n)=O(g(n))$.
 
 Next, let's prove that $T(n)=\Omega(g(n))$. Because $4n^2+3\geq0$ for any real $n$, we know the following is true for $n>0$:
-$$5n^2log(n)+4n^2+3\geq5n^2log(n)\geq2n^2log(n)$$
+$$
+5n^2log(n)+4n^2+3\geq5n^2log(n)\geq2n^2log(n)
+$$
 Therefore, for $c=\frac{5}{2}$ and $n_0=1$ we know that $5n^2log(n)+4n^2+3\geq c(2n^2log(n))$, and therefore $T(n)=\Omega(g(n))$. 
 
 As we have proven that $T(n)=O(g(n))$ and $T(n)=\Omega(g(n))$, we have also proved $T(n)=\Theta(g(n))$.
 
 #### 2.)Prove T(n)=O(g(n)) via limit lemma.
 To prove this, we must show that $\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}\leq c$. 
-$$\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(5n^2log(n)+4n^2+3)}{\dfrac{d}{dn}(2n^2log(n))}$$
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{10nlog(n)+13n}{4nlog(n)+2n}$$
+$$
+\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(5n^2log(n)+4n^2+3)}{\dfrac{d}{dn}(2n^2log(n))}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{10nlog(n)+13n}{4nlog(n)+2n}
+$$
 ok i give up on typing well ima do the rest of this doc as if im texting. here we will treat log as base e because it makes derivatives easier. time for round 2 of l'hopitals
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{\dfrac{d}{dn}(10nlog(n)+13n)}{\dfrac{d}{dn}(4nlog(n)+2n)}$$
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{10log(n)+23}{4log(n)+7}$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{\dfrac{d}{dn}(10nlog(n)+13n)}{\dfrac{d}{dn}(4nlog(n)+2n)}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{10log(n)+23}{4log(n)+7}
+$$
 ok ngl i dont know how many times she wants us to take the derivative like its very obviously 10/4 here so im not gonna bother to do it again
-$$=\dfrac{5}{2}$$
+$$
+=\dfrac{5}{2}
+$$
 yay boom its equal to constant, thus $T(n)=O(g(n))$
 
 #### 3.) Limit Lemma
 ##### f(n)=nlogn g(n)=n^2 +3n prove via limit lemma that f(n)=O(g(n))
 same as before, we gotta show $\displaystyle{\lim_{n \to \infty}}\frac{f(n)}{g(n)}\leq c$
-$$\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(nlog(n))}{\dfrac{d}{dn}(n^2+3n)}$$
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{log(n)+1}{2n+3}$$
+$$
+\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(nlog(n))}{\dfrac{d}{dn}(n^2+3n)}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{log(n)+1}{2n+3}
+$$
 run it back babyyyyy
-$$=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(log(n)+1)}{\dfrac{d}{dn}(2n+3)}$$
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{\dfrac{1}{n}}{2}$$
-$$=0$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(log(n)+1)}{\dfrac{d}{dn}(2n+3)}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{\dfrac{1}{n}}{2}
+$$
+$$
+=0
+$$
 once again, we got a constant and have thus proved $f(n)=O(g(n))$
 #### Can I prove log(n)=O(n^x) for some x? prove yes or explain why no.
 mmmm lets see. for $x>0$, 
-$$\displaystyle{\lim_{n \to \infty}}\frac{log(n)}{n^x}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(log(n))}{\dfrac{d}{dn}(n^x)}$$
-$$=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{1}{n}}{xn^{x-1}}$$
-$$=\displaystyle{\lim_{n \to \infty}}\dfrac{1}{xn^x}$$
-$$=0$$
+$$
+\displaystyle{\lim_{n \to \infty}}\frac{log(n)}{n^x}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(log(n))}{\dfrac{d}{dn}(n^x)}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{1}{n}}{xn^{x-1}}
+$$
+$$
+=\displaystyle{\lim_{n \to \infty}}\dfrac{1}{xn^x}
+$$
+$$
+=0
+$$
 The expression approaches a constant, so we have therefore proven that $log(n)=O(n^x)$ for some $x$.  
 #### 4.)Recurrences.
 v3 update - I asked and she said add base cases so I have updaded the pseudo code to include  base cases.
@@ -132,6 +171,8 @@ print smallest
 ```
 ##### Write  psudedocode the list all possible substring of a string S.  
 ``` python
+# empty string
+print ''
 # iterate thru each character the substring could start with
 for (i = 0 to (S.length - 1))
     # iterate thru each character the substring could end with

@@ -1,27 +1,35 @@
-> [!info] V1 Patch Notes - Oct. 9, 5:49 am
-> hey losers :3 !!! its 5:49 am i didnt check any of my work please ping me with any errors so i can revise a v2, , ,,, i should just host a website for these so i dont have to keep uploading new versions.... im hungry.. . could go for a warm bowl of soondubu rn. oh god i have to wake up at like 6:30 im so cooked time to faint in bed. miku out!! 🛌🌙
-> ![[Fall 2024/ECS122A/quiz/src/Pasted image 20241009020843.png|200]]
+> [!info] v1 Patch Notes - Oct. 9, 5:49 am
+> hey losers :3 !!! its 5:49 am i didnt check any of my work pls ping me with any errors so i can revise a v2, , ,,, i should just host a website for these.... im hungry.. . could go for a warm bowl of soondubu rn. god i have to wake up at 6:30 im cooked time to faint in bed. miku out!! 🛌🌙
+> 
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241009020843.png|200]]
 
-> [!info] V2 Patch Notes - Oct 11, 12:45 am
-> hi i filled out question 1 with some explanation of previous problems, did some fixups throughout the doc to make explanations clearer, added more info and fixed an error in question 2.b, added some formulas uhh oh yeah i made the soondubu i was talking about in v1 lol looks like im starting a mini blog in the patch notes hehehehe
-> ![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010202319.png | 300]]
+> [!info] v2 Patch Notes - Oct 11, 2:45 am
+> hi i filled out question 1 with some explanation of previous problems, did some fixups throughout the doc to make explanations clearer, added more info and fixed an error in question 2.b, added some formulas uhh oh yeah i made the soondubu i was talking about in v1 lol looks like im starting a mini blog in the patch notes hehehehe oh yeah actual website now yippeeeeeeeeeeeeeeeee!!!!!
+> 
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010202319.png| 300]]
 ### 1) Code analysis like quiz1 or hw1 or any class code analysis 
 > [!abstract] Note From Miku
 > uhh uhhhhnmmm ermmm she didnt really give problems here... so instead i will show you guys my thought process with the hw ones...
 
 okay first for **5.e from homework 1**
-![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010152949.png]]
+
+![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010152949.png]]
+
 what i usually do w these nested loops is find the number of iterations each loop has in O(n) form. so at the top we have a loop from i to n. obviously this is O(n). after that, the j goes from 0 to i$^2$. we just determined i to iterate O(n) times. so we can square that and determine j iterates O(n$^2$) times. then we have k which loops from 0 to j. we just determined j to iterate O(n$^2$) times, so k also iterates O(n$^2$) times. finally, inside that loop, `++sum` is O(1). multiply all those numbers together and we get O(n$^4$).
 
-> [!warning] Be Careful !!!
+> [!warning] Careful !!!
 > watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. up next ill go over examples of some things to pay attention for.
 
 **hw1 problem 10**
-![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010164302.png]]
+
+![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010164302.png]]
+
 questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what j does here, it adds 1 to j every inner for loop; this causes j to increment by 2 instead of 1, which is still O(n). for i, at the end of the inner j for loop, it has increased by n/2. This means the outer for loop can only run twice, which is still an O(1) operation. 
 
 other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: **hw1 problem 5.f**
-![[Fall 2024/ECS122A/quiz/src/Pasted image 20241010165621.png]]
+
+![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010165621.png]]
+
 lets start with loop analysis on this one. i iterates from 1 to n, so thats O(n). j iterates from 1 to i$^2$ and is thus O(n$^2$). then, the innermost loop iterates k from 0 to j, which is again O(n$^2$). however, the if statement in the 2nd loop prevents this from being the same as problem e. the innermost loop is nested in an if statement which checks if j%i == 0. this means while j iterates O(n$^2$) times, its contents only run every $i$ times, which is linked to O(n). then, we can divide to determine j's loop only runs its content O(n) times, not O(n$^2$). Then we can multiply these nests and find that the runtime of this code is O(n$^4$).
 ### 2) Solve via recurrence tree, and **confirm via substitution.**
 > [!tip] Formulas!!
@@ -44,7 +52,8 @@ if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
 if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
 if $a<b^d$ then the recurrence is $O(n^d)$.
 #### T(n)=27T(n/3)+5n^3  
-![[Fall 2024/ECS122A/quiz/src/II-II-A.excalidraw.svg|600]]
+![[Fall 2024/ECS122A/Quiz Preps/src/II-II-A.excalidraw.svg|600]]
+
 Work: $5n^3$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
@@ -79,7 +88,8 @@ c\geq5
 $$
 Thus, $T(n)=O(n^3log(n))$ is proven by definition of big O as $T(n)\leq cn^3log(n)$ for $c=5$ and $n_0=1$
 #### T(n)=27T(n/3)+5n^2  
-![[Fall 2024/ECS122A/quiz/src/II-II-B.excalidraw.svg|600]]
+![[Fall 2024/ECS122A/Quiz Preps/src/II-II-B.excalidraw.svg|600]]
+
 Work: $3^i(5n^2)$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
@@ -132,8 +142,9 @@ $$
 c\geq \dfrac{5}{3}
 $$
 As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{4}$ and $n_0=1$.
-#### T(n)=27T(n/3)+5n\^4------------------------------
-![[Fall 2024/ECS122A/quiz/src/II-II-C.excalidraw.svg|600]]
+#### T(n)=27T(n/3)+5n\^4
+![[Fall 2024/ECS122A/Quiz Preps/src/II-II-C.excalidraw.svg|600]]
+
 Work: $\dfrac{5n^4}{3^i}$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
@@ -168,7 +179,7 @@ $$
 Thus, $T(n)=O(n^4)$ is proven by definition of big O as $T(n)\leq cn^4$ for $c=7.5$ and $n_0=1$.
 ### 3) Create a linear algorithm that adds an array of numbers, and analyze it. 
 >[!abstract]  Note From Miku
- uhhhh we already did this for hw but i think its to set up for problem 4. ill just copy my prev code lol
+> uhhhh we already did this for hw but i think its to set up for problem 4. ill just copy my prev code lol
 
 ```python
 arraySum(arr):
@@ -190,7 +201,9 @@ divAndConqSum(arr, start, end):
 ```
 
 Recurrence equation: $T(n)=2T\left(\dfrac{n}{2}\right)+O(1)$
-![[Fall 2024/ECS122A/quiz/src/II-IV.excalidraw.svg|400]]
+
+![[Fall 2024/ECS122A/Quiz Preps/src/II-IV.excalidraw.svg|400]]
+
 Work: $2^k$
 Depth: Largest recursive constant is 1/2.
 $k=log_2(n)$
@@ -201,7 +214,7 @@ $$
 & =O(n)
 \end{align}
 $$
-### 5)  
+### 5)  Pseudocode
 > [!abstract] Note From Miku
 > we already did all of these for quiz1/hw1. my guess is that it'll be on the quiz this time?? dont quote me on that im yapping but ima copy my prev hw/quiz answers onto here
 #### Write pseudocode that lists the subsets of an array of ints.
