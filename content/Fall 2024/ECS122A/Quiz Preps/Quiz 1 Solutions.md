@@ -12,9 +12,7 @@
 > 
 > **v3** - i asked questions abt stuff i wasnt sure about after lecture today oct 3rd so i hope this doc is correct now. question 4 i added base cases. question 5 not having a base case was in fact an oversight. oh and for question 1 i asked about log bases, we can use any base to our convenience if not specified by her.  
 
-# Big-0, Omega and Theta by definition
-
-## 1) Prove that T(n)=5(n^2)logn+4n^2+3 is Big-Theta of g(n)=2(n^2)logn
+## 1) 
 To prove this, we must show that $T(n)=O(g(n))$ as well as $T(n)=\Omega(g(n))$.
 
 First, let's prove that $T(n)=O(g(n))$. We know the following is true for $n\geq10$:
@@ -35,7 +33,7 @@ Therefore, for $c=\frac{5}{2}$ and $n_0=1$ we know that $5n^2log(n)+4n^2+3\geq c
 
 As we have proven that $T(n)=O(g(n))$ and $T(n)=\Omega(g(n))$, we have also proved $T(n)=\Theta(g(n))$.
 
-## 2) Prove T(n)=O(g(n)) via limit lemma
+## 2) 
 To prove this, we must show that $\displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}\leq c$. 
 $$
 \displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(5n^2log(n)+4n^2+3)}{\dfrac{d}{dn}(2n^2log(n))}
@@ -56,8 +54,8 @@ $$
 $$
 yay boom its equal to constant, thus $T(n)=O(g(n))$
 
-## 3) Limit Lemma
-### f(n)=nlogn g(n)=n^2 +3n prove via limit lemma that f(n)=O(g(n))
+## 3) 
+### problem a
 same as before, we gotta show $\displaystyle{\lim_{n \to \infty}}\frac{f(n)}{g(n)}\leq c$
 $$
 \displaystyle{\lim_{n \to \infty}}\frac{T(n)}{g(n)}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(nlog(n))}{\dfrac{d}{dn}(n^2+3n)}
@@ -76,7 +74,7 @@ $$
 =0
 $$
 once again, we got a constant and have thus proved $f(n)=O(g(n))$
-### Can I prove log(n)=O(n^x) for some x? prove yes or explain why no.
+### problem b
 mmmm lets see. for $x>0$, 
 $$
 \displaystyle{\lim_{n \to \infty}}\frac{log(n)}{n^x}=\displaystyle{\lim_{n \to \infty}}\frac{\dfrac{d}{dn}(log(n))}{\dfrac{d}{dn}(n^x)}
@@ -91,10 +89,10 @@ $$
 =0
 $$
 The expression approaches a constant, so we have therefore proven that $log(n)=O(n^x)$ for some $x$.  
-## 4) Recurrences
+## 4) 
 v3 update - I asked and she said add base cases so I have updaded the pseudo code to include  base cases.
-### a)Provide a Sample code for the recurrences below.
-#### i) T(n)=T(n/5)+T(3n/5)+n
+### a)
+#### i) 
 ```python
 foo(int n)
     if n <= 1
@@ -104,7 +102,7 @@ foo(int n)
     for(i=1 to n)
            print "meow :3" 
 ```
-#### ii)T(n)=T(2n/5)+T(3n/5)+n
+#### ii)
 ```python
 foo(int n)  
     if n <= 1
@@ -115,7 +113,7 @@ foo(int n)
            print "meow :3"
 ```
 
-#### iii) T(n)=4T(n/2)+n\^3
+#### iii) 
 ```python
 foo(int n)  
     if n <= 1
@@ -127,7 +125,6 @@ foo(int n)
 ```
 ## Problem 5
 v3 update: the lack of a base case here was an error. treat the code as if there were one
-### Given code can you write the recurrence
 ```
 foo( int n)  
     foo(n/2);  
@@ -137,7 +134,7 @@ foo( int n)
 idk man just look at it i guess
 $T(n)=T(n/2)+n^2$
 ## Problem 6)  
-### Write pseudocode that lists the subsets of an array of ints.  
+### a)  
 ```python
 # need 2^n iterations for the 2^n subsets
 for (i = 0 to (2^arr.length - 1))
@@ -157,7 +154,7 @@ for (i = 0 to (2^arr.length - 1))
             subset.push(arr[j]) 
     print subset
 ```
-### Write psuedocode finds the smallest number of array of ints.  
+### b)
 ```python 
 if arr.len = 0
     return "empty" 
@@ -169,7 +166,7 @@ for (i = 1 to (arr.length - 1))
         smallest = arr[i]
 print smallest
 ```
-### Write psudedocode the lists all possible substring of a string S.  
+### c)
 ``` python
 # empty string
 print ''
@@ -180,7 +177,7 @@ for (i = 0 to (S.length - 1))
         sub = S[i to j]
         print sub
 ```
-### Given you have two sorted lists, write pseudocode that returns a new merged and sorted list
+### d)
 ```python
 mergeSortedLists(list1, list2)
     mergedList = []

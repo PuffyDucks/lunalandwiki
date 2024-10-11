@@ -7,12 +7,11 @@
 > filled out q1 w/ explanation of prev problems, added to question 2.b, included some formulas, uhhhh i made the soondubu i talked abt in v1 notes lol oh yeah we got an actual website now yippeeeeeeeeeeeeeeeee!!!!!
 > 
 > ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.jpg | 300]]
-# 1) Code analysis like quiz1 or hw1 or any class code analysis 
+# 1) 
 > [!abstract] Note From Miku
 > uhh uhhhhnmmm ermmm she didnt really give problems here... so instead i will show you guys my thought process with the hw ones...
 
 ## hw1 problem 5.e
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010152949.png]]
 
 what i usually do w these nested loops is find the number of iterations each loop/function has in $O(n)$ form. so at the top we have a for loop iterating `i` from 0 to n. obviously this makes `i`'s iterations $O(n)$. 
 
@@ -25,17 +24,15 @@ finally, within the innermost loop is a $O(1)$ line, `++sum`. multiply all those
 > watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. below ill go over two examples of some things to pay attention for.
 
 ## hw1 problem 10
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010164302.png]]
 
 questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what `j` does here, it adds 1 to `j` every **inner** for loop iteration; this causes `j` to increment by 2 instead of 1, which is still $O(n)$. then, at the end of the inner for loop, `i` has increased by n/2 due to the line `i++`. This means the **outer** for loop only runs exactly twice, which is an O(1) operation. 
 
 other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: 
 
 ## hw1 problem 5.f
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010165621.png]]
 
 lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $O(n)$. `j` iterates from 1 to `i`$^2$ and is thus $O(n^2)$. the innermost loop iterates `k` from 0 to `j`, which is again $O(n^2)$. however, an if statement in the 2nd loop prevents this problem from being identical to problem e. the innermost loop is nested in an if statement which checks if `j % i == 0`. this means although `j` iterates $O(n^2)$ times, its contents only run every `i` times. using this information, we can divide `j`'s iterations by `i`'s iterations to determine the second loop's content only runs $O(n)$ times, not $O(n^2)$. we can multiply these values and calculate the runtime as $O(n)\cdot \dfrac{O(n^2)}{O(n)}\cdot O(n^2)\cdot O(1)=O(n^4)$.
-# 2) Solve via recurrence tree, and **confirm via substitution.**
+# 2) 
 > [!tip] Formulas!!
 > Here are some formulas that are super useful for solving **geometric series**!! ^^
 > The main formula u should know is
@@ -58,7 +55,7 @@ lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $
 > if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
 > 
 > if $a<b^d$ then the recurrence is $O(n^d)$.
-## T(n)=27T(n/3)+5n^3  
+## problem a
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-A.excalidraw.svg|600]]
 
 Work: $5n^3$
@@ -94,7 +91,7 @@ $$
 c\geq5
 $$
 Thus, $T(n)=O(n^3log(n))$ is proven by definition of big O as $T(n)\leq cn^3log(n)$ for $c=5$ and $n_0=1$
-## T(n)=27T(n/3)+5n^2  
+## problem b
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-B.excalidraw.svg|600]]
 
 Work: $3^i(5n^2)$
@@ -149,7 +146,7 @@ $$
 c\geq \dfrac{5}{2}
 $$
 As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O as $T(n)\leq cn^3$ for $c=\dfrac{5}{2}$ and $n_0=1$.
-## T(n)=27T(n/3)+5n\^4
+## problem c
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-C.excalidraw.svg|600]]
 
 Work: $\dfrac{5n^4}{3^i}$
@@ -184,7 +181,7 @@ $$
 c\geq\dfrac{15}{2}
 $$
 Thus, $T(n)=O(n^4)$ is proven by definition of big O as $T(n)\leq cn^4$ for $c=\dfrac{15}{2}$ and $n_0=1$.
-# 3) Create a linear algorithm that adds an array of numbers, and analyze it. 
+# 3) 
 >[!abstract]  Note From Miku
 > uhhhh we already did this for hw but i think its to set up for problem 4. ill just copy my prev code lol
 
@@ -195,7 +192,7 @@ arraySum(arr):
     total += arr[i]
   return arrTotal
 ```
-# 4) Create a divide & conquer algorithm that adds up an array of numbers and analyzes it using the recurrence tree method.
+# 4) 
 ```python
 divAndConqSum(arr, start, end):
   if start == end: # base case
@@ -221,10 +218,10 @@ $$
 & =O(n)
 \end{align*}
 $$
-# 5) Pseudocode
+# 5) 
 > [!abstract] Note From Miku
 > we already did all of these for quiz1/hw1. my guess is that it'll be on the quiz this time?? dont quote me on that im yapping but ima copy my prev hw/quiz answers onto here
-#### Write pseudocode that lists the subsets of an array of ints.
+#### a
 ```python
 listSubsets(arr):
   n = arr.length
@@ -238,7 +235,7 @@ listSubsets(arr):
     subsets.push(subset)
   return subsets
 ```
-#### Write pseudocode finds the smallest number of an array of ints.  
+#### b  
 ```python
 findMinimum(arr):
   n = arr.length
@@ -251,7 +248,7 @@ findMinimum(arr):
       smallest = arr[i]
   return smallest
 ```
-#### Write pseudocode to list all possible substrings of a string S.  
+#### c 
 ```python
 possibleSubstrings(S):
   n = S.length
@@ -262,7 +259,7 @@ possibleSubstrings(S):
       substrings.push(S.substring(i, j))
   return substrings
 ```
-#### Given you have two sort lists write pseudocode that returns a new merged sorted
+#### d
 ```python
 mergeSortedLists(list1, list2):
     mergedList = []
