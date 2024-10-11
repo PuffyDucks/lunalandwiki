@@ -61,10 +61,10 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "catppuccin-macchiato",
-          dark: "catppuccin-macchiato",
+          light: "catppuccin-mocha",
+          dark: "catppuccin-mocha",
         },
-        keepBackground: false,
+        keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
