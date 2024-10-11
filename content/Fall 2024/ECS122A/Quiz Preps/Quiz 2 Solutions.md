@@ -52,8 +52,11 @@ lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $
 > $$
 > As a bonus heres **Masters Theorem**. Makes lots of problems so easy :D
 > For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$,
+> 
 > if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
+> 
 > if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
+> 
 > if $a<b^d$ then the recurrence is $O(n^d)$.
 ## T(n)=27T(n/3)+5n^3  
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-A.excalidraw.svg|600]]
