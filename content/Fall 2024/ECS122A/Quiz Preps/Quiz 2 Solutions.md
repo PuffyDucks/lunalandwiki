@@ -17,7 +17,7 @@ okay first for **5.e from homework 1**
 
 what i usually do w these nested loops is find the number of iterations each loop has in O(n) form. so at the top we have a loop from i to n. obviously this is O(n). after that, the j goes from 0 to i$^2$. we just determined i to iterate O(n) times. so we can square that and determine j iterates O(n$^2$) times. then we have k which loops from 0 to j. we just determined j to iterate O(n$^2$) times, so k also iterates O(n$^2$) times. finally, inside that loop, `++sum` is O(1). multiply all those numbers together and we get O(n$^4$).
 
-> [!warning] Careful !!!
+> [!warning] careful ‼️
 > watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. up next ill go over examples of some things to pay attention for.
 
 **hw1 problem 10**
@@ -49,10 +49,10 @@ lets start with loop analysis on this one. i iterates from 1 to n, so thats O(n)
 > \sum\limits_{k=0}^{n}a=a(n+1)
 > $$
 > As a bonus heres **Masters Theorem**. Makes lots of problems so easy :D
-For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$,
-if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
-if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
-if $a<b^d$ then the recurrence is $O(n^d)$.
+> For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$,
+> if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
+> if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
+> if $a<b^d$ then the recurrence is $O(n^d)$.
 #### T(n)=27T(n/3)+5n^3  
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-A.excalidraw.svg|600]]
 
@@ -60,11 +60,11 @@ Work: $5n^3$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
 $$
-\begin{align}
+\begin{align*}
 \sum\limits_{k=0}^{log_3(n)}5n^3&=(1+log_3(n))(5n^3)\\
 &=5n^3log_3(n)+5n^3\\
 &=O(n^3log(n))
-\end{align}
+\end{align*}
 $$
 **Substitution**
 Hypothesis: $T(n)=O(n^3log(n))$
@@ -97,13 +97,13 @@ Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
 
 $$
-\begin{align}
+\begin{align*}
 \sum\limits_{k=0}^{log_3(n)}3^k(5n^2)
 &=5n^2\dfrac{(3^{log_3(n)+1}-1)}{3-1} \\
 &=5n^2\dfrac{(3n-1)}{2} \\
 &=\dfrac{15}{2}n^3-\dfrac{5}{2}n^2 \\
 & =O(n^3)
-\end{align}
+\end{align*}
 $$
 
 **Substitution**
@@ -151,13 +151,13 @@ Work: $\dfrac{5n^4}{3^i}$
 Depth: Largest recursive constant is 1/3.
 $k=log_3(n)$
 $$
-\begin{align}
+\begin{align*}
 \sum\limits_{k=0}^{log_3(n)}\dfrac{5n^4}{3^k}
 & \leq\sum\limits_{k=0}^{\infty}\dfrac{5n^4}{3^k} \\
 & =\dfrac{5n^4}{1-\dfrac{1}{3}} \\
 & =\dfrac{15}{2}n^4 \\
 & =O(n^4)
-\end{align}
+\end{align*}
 $$
 
 **Substitution**
@@ -210,11 +210,11 @@ Work: $2^k$
 Depth: Largest recursive constant is 1/2.
 $k=log_2(n)$
 $$
-\begin{align}
+\begin{align*}
 \sum\limits_{k=0}^{log_2(n)}2^k&=\dfrac{2^{log_2(n)+1}-1}{2-1} \\
 & =2n-1 \\
 & =O(n)
-\end{align}
+\end{align*}
 $$
 ### 5)  Pseudocode
 > [!abstract] Note From Miku
