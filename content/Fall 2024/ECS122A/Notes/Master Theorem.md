@@ -1,9 +1,10 @@
 ---
 week: "2"
 ---
-For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$:
+The master theorem allows us to easily analyze any recurrence in the form of
+$T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$
 
-| Condition | Recurrence        |
+| Condition | Bound             |
 | --------- | ----------------- |
 | $a>b^d$   | $O(n^{log_B(A)})$ |
 | $a=b^d$   | $O(n^dlog(n))$    |
