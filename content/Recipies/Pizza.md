@@ -1,5 +1,5 @@
-![[Pasted image 20241012013929.png | 300]]
-Made this today (October 12, 2024)
+![[Pasted image 20241012013929.png | 300]]  
+> *Made this today(Oct. 11, 2024) for housemates!! Two-thirds pepperoni, one-third cheese.*
 # Ingredients
 - [ ] 2.5 cup warm water
 - [ ] 1 tbsp sugar
