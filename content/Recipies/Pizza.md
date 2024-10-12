@@ -1,5 +1,5 @@
-![[Pasted image 20241011201940.png | 300]]
-
+![[Pasted image 20241012013929.png | 300]]
+Made this today (October 12, 2024)
 # Ingredients
 - [ ] 2.5 cup warm water
 - [ ] 1 tbsp sugar
