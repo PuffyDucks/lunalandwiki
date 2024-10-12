@@ -7,7 +7,7 @@
 1 tbsp salt
 Many cups of bread flour
 Toppings
-# Instructions:
+# Instructions
 1. Mix water, sugar, and yeast. Wait 5 mins and check for yeast activity(this is to make sure your yeast didn't die).
 2. Mix in olive oil, salt, and flour. Start with 4-5 cups of flour, and add more as needed while kneading. It's difficult to give an amount in volume because the amount of air can drastically affect flour density. It's best to use your own judgement!
 3. Split into bowls, cover, and let rise in fridge for a few hours to 5 days. The longer the yummier!!
