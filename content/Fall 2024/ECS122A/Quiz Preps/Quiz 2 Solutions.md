@@ -72,6 +72,7 @@ $$
 \end{align*}
 $$
 **Substitution**
+
 Hypothesis: $T(n)=O(n^3log(n))$
 Assuming $T(n)\leq cn^3log(n)$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\frac{k}{3}\right)\leq c(\frac{k}{3})^3log\left(\frac{k}{3}\right)$. Thus, we know that
 $$
@@ -166,6 +167,7 @@ $$
 $$
 
 **Substitution**
+
 Hypothesis: $T(n)=O(n^4)$
 Assuming $T(n)\leq cn^4$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\dfrac{k}{3}\right)\leq \dfrac{c}{81}k^4$. Thus, we know that
 $$
