@@ -1,6 +1,6 @@
 ![[Pasted image 20241011201940.png | 300]]
 # Ingredients
-2.5 cup **warm** water
+2.5 cup warm water
 1 tbsp sugar
 1 tsp dry yeast
 2 tbsp olive oil
