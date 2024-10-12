@@ -1,4 +1,4 @@
-![[Pasted image 20241012013929.png | 300]]  
+![[Recipies/src/pizza.png| 300]]  
 > *Made this today(Oct. 11, 2024) for housemates!! Two-thirds pepperoni, one-third cheese.*
 # Ingredients
 - [ ] 2.5 cup warm water

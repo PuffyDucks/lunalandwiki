@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "e1f7419c3dea6276",
+    "type": "split",
+    "children": [
+      {
+        "id": "c515801d56937e7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6250a1182d2185c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Recipies/Pizza.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d63e8fd2ed9c898",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "pizza.png"
+              }
+            }
+          },
+          {
+            "id": "ac07b9505c280503",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fall 2024/ECS122A/Notes/Big O.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "799c20841024b3a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fall 2024/ECS122A/Notes/Master Theorem.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6f705f402807ac8",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.jpg"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "35a0a460065c7205",
+    "type": "split",
+    "children": [
+      {
+        "id": "2db5b7fe8aedbd5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "061a6a5f3eebbcd8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4a53737292e9ce7d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b5d73c0cfff3e98b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fcb46e18757cc175",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab394c115d748383",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c6f9ecc94bba2d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "pizza.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "95453b79702a773e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "pizza.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7f1cde79a012189d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bfc854566df4a319",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "pizza.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "061a6a5f3eebbcd8",
+  "lastOpenFiles": [
+    "Recipies/Pizza.md",
+    "pizza.png",
+    "Pasted image 20241012013557.png",
+    "Spring 2024/EEC161/Notes/Variance and Standard Deviation.md",
+    "Spring 2024/EEC161/Notes/Tree Diagrams.md",
+    "Spring 2024/EEC161/Notes/Sums.md",
+    "Spring 2024/EEC161/Notes/Stochastic Processes.md",
+    "Spring 2024/EEC161/Notes/Set Theory Review.md",
+    "Spring 2024/EEC161/Notes/Reliability Analysis.md",
+    "Spring 2024/EEC161/Notes/Probability Density Function.md",
+    "Spring 2024/EEC161/Notes/Probability Axioms.md",
+    "Spring 2024/EEC161/Notes/Partitions, Law of Total Probability, and Bayes' Theorem.md",
+    "Spring 2024/EEC161/Notes/Pairs of Random Variables.md",
+    "Spring 2024/EEC161/Notes/Multiple Variable Functions.md",
+    "Spring 2024/EEC161/Notes/Moment Generating Function.md",
+    "Spring 2024/EEC161/Notes/Independent Trials.md",
+    "Spring 2024/EEC161/Notes/Gaussian Random Variables.md",
+    "Spring 2024/EEC161/Notes/Families of Discrete Random Variables.md",
+    "Spring 2024/EEC161/Notes/Independence.md",
+    "Spring 2024/EEC161/Notes/Families of Continuous Random Variables.md",
+    "Spring 2024/EEC161/Notes/Experiment Terminology.md",
+    "Spring 2024/EEC161/Notes/Expected Value of Discrete Random Variables.md",
+    "Spring 2024/EEC161/Notes/Expected Value of Continuous Random Variables.md",
+    "Spring 2024/EEC161/Notes/Discrete Random Variable Definitions.md",
+    "Spring 2024/EEC161/Notes/Cumulative Distribution Function.md",
+    "Spring 2024/EEC161/Notes/Covariance, Correlation, and Independence.md",
+    "Spring 2024/EEC161/Notes/Counting Methods.md",
+    "Spring 2024/EEC161/Notes/Conditional Probability Models.md",
+    "Spring 2024/EEC161/Notes/src/Series.svg",
+    "Spring 2024/EEC161/Notes/src/Pasted image 20240528210029.png",
+    "Spring 2024/EEC161/Notes/src/Partitions.png",
+    "Spring 2024/EEC161/Notes/src/Parallel.svg",
+    "Spring 2024/EEC161/Notes/src",
+    "Spring 2024/EEC161/Notes",
+    "Spring 2024/EEC161/Cheat Sheets",
+    "cat2.png",
+    "Recipies/Pasted image 20241011201940.png",
+    "Recipies",
+    "Pasted image 20241011125258.png",
+    "Pasted image 20241011125310.png",
+    "Fall 2024/ECS122A/Notes",
+    "Fall 2024/ECS122A/Quiz Preps/src",
+    "Fall 2024/ECS122A/Quiz Preps",
+    "Fall 2024/ECS175/Notes/src",
+    "Fall 2024/ECS122A/Notes/src",
+    "Fall 2024/ECS122A/Homework/src"
+  ]
+}
