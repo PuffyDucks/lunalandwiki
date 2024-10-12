@@ -1,13 +1,13 @@
 ![[Pasted image 20241011201940.png | 300]]
 
 # Ingredients
-2.5 cup warm water
-1 tbsp sugar
-1 tsp dry yeast
-2 tbsp olive oil
-1 tbsp salt
-Many cups of bread flour
-Toppings
+- [ ] 2.5 cup warm water
+- [ ] 1 tbsp sugar
+- [ ] 1 tsp dry yeast
+- [ ] 2 tbsp olive oil
+- [ ] 1 tbsp salt
+- [ ] Many cups of bread flour
+- [ ] Toppings
 # Instructions
 1. Mix water, sugar, and yeast. Wait 5 mins and check for yeast activity(this is to make sure your yeast didn't die).
 2. Mix in olive oil, salt, and flour. Start with 4-5 cups of flour, and add more as needed while kneading. It's difficult to give an amount in volume because the amount of air can drastically affect flour density. It's best to use your own judgement!
