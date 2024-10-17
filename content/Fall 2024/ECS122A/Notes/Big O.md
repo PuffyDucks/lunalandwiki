@@ -2,9 +2,9 @@
 week: "1"
 ---
 # Definitions
-**Big O**: There exists $c>0$ and $n_0$ such that $0\leq f(n)\leq cg(n)$ such that $n\geq n_0$
+**Big O**: There exists $c>0$ and $n_0$ such that $0\leq f(n)\leq cg(n)$ for $n\geq n_0$
 
-**Big Omega**: There exists $c>0$ and $n_0$ such that $cg(n)\leq f(n)$ such that $n\geq n_0$
+**Big Omega**: There exists $c>0$ and $n_0$ such that $cg(n)\leq f(n)$ for $n\geq n_0$
 
 **Big Theta**: The asymptotic function that is both big O and big omega. 
 
