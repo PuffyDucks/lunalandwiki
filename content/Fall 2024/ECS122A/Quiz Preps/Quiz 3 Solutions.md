@@ -1,7 +1,6 @@
 > [!info] v1 Patch Notes - Oct. 25, 4:00 pm
-i bombed the midterm :') me when 40 min delay. ive been slacking a bit... but this quiz doesnt seem so bad at least. ok luna blog uhh sorry i got this one out kinda late i havent done 2 yet ill do it in v2 im playing smash rn 
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241025200715.png]]
-
+> i bombed the midterm :') me when 40 min delay. ive been slacking a bit... but this quiz doesnt seem so bad at least. ok luna blog uhh sorry i got this one out kinda late i havent done 2 yet ill do it in v2 im playing smash rn lol
+> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241025200715.png]]
 
 # a.) Find the closed form of  T(n)=T(n/2)+ 4 if the base case is 2 using recurrence tree.  
 ![[Fall 2024/ECS122A/Quiz Preps/src/III-a.excalidraw.svg]]  
@@ -18,7 +17,7 @@ $$
 \sum\limits_{i=0}^{\log_2(n)-1}4=4(\log_2(n)-1+1)=4\log_2(n)
 $$
 # b.) Use all **possible**  method to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)
-ill do this one later im playing smash rn
+ill do this one later,.,,.,.
 
 # c.) Design a function that does the following
 
