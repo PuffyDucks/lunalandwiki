@@ -16,9 +16,16 @@ Our work at each level is 4, so we can calculate the closed form with
 $$
 \sum\limits_{i=0}^{\log_2(n)-1}4=4(\log_2(n)-1+1)=4\log_2(n)
 $$
-# b.) Use all **possible**  method to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)
-ill do this one later,.,,.,.
-
+# b.) Use all **possible**  method to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)  
+> [!warning] ermm
+> Masters theorem not possible cuz not in the right form. heres the other 2 tho
+## Recursion Tree  
+![[Fall 2024/ECS122A/Quiz Preps/src/III-b.excalidraw.svg]]
+Work per level: $n$
+Depth: $O(\log(n))$
+Runtime: $O(\log(n))$
+## Substitution  
+> [!help] work in progress
 # c.) Design a function that does the following
 
 > **Name**: Silly
@@ -43,11 +50,11 @@ Silly(x):
 > 
 > oh another method, from left to right: calculate some `a = pow(i, 3)` and then divide by 3. quotient is value of leftmost unfilled digit, then make x = the remainder. too lazy to explain this one err i mean left as an exercise for the reader ok next problem!! (jk ping and ill explain)
 
-**da runtime**
+## Runtime
 
 first two lines are O(1). the for loop iterates log(n) times. the contents inside for loop is O(1), so the entire for loop is log(n). the dominant of these two is log(n), which is the function's runtime. 
 
-# d.) Show the top level recursive algorithm for maxsubarray problem
+# d.) 
 > [!info] tbh i totally i read off of the wikipedia page's code 
 > https://en.wikipedia.org/wiki/Maximum_subarray_problem
 ```python
@@ -63,8 +70,6 @@ maxSubarray(arr):
     return max_sum
 ```
 # e.) Show the bruteforce algorithm for maxsubarray problem.
-> [!callout]
-> zzz too lazy to comment these. maybe for v2 if i feel like it
 
 ```python
 maxSubarrayBruteforce(arr):
