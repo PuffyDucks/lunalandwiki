@@ -16,14 +16,14 @@ Our work at each level is 4, so we can calculate the closed form with
 $$
 \sum\limits_{i=0}^{\log_2(n)-1}4=4(\log_2(n)-1+1)=4\log_2(n)
 $$
-# b.) Use all **possible**  method to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)  
+# b.) Use all **possible** methods to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)  
 > [!warning] ermm
 > Masters theorem not possible cuz not in the right form. heres the other 2 tho
 ## Recursion Tree  
 ![[Fall 2024/ECS122A/Quiz Preps/src/III-b.excalidraw.svg]]
 Work per level: $n$
 Depth: $O(\log(n))$
-Runtime: $O(\log(n))$
+Runtime: $O(n\log(n))$
 ## Substitution  
 > [!help] work in progress
 # c.) Design a function that does the following
