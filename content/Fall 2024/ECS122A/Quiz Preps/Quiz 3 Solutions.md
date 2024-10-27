@@ -25,8 +25,8 @@ $$
 > i have been informed masters theorem and substitution are not possible in this unbalanced form. heres recursion tho
 ## Recursion Tree  
 ![[Fall 2024/ECS122A/Quiz Preps/src/III-b.excalidraw.svg]]
-Work per level: $n$  
-Depth: $O(\log(n))$  
+Work per level: $n$ as seen in the image above  
+Depth: $O(\log(n))$ since we're multiplying $n$ by a constant less than 1 each time we plug it in.  
 Runtime: $O(n\log(n))$  
 # c.) Design a function that does the following
 
