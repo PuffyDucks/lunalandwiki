@@ -6,6 +6,7 @@ haiiiii hihihihi hiiiiii :3 haiiii hiii haiii ^-^ thanks for visiting my website
 # ECS122A
 - [[Quiz 1 Solutions]]
 - [[Quiz 2 Solutions]]
+- [[Fall 2024/ECS122A/Quiz Preps/Quiz 3 Solutions|Quiz 3 Solutions]]
 
 # OK BORING STUFF OVER LOOK AT MY CAT
 
