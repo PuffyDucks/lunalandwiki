@@ -57,8 +57,7 @@ Silly(x):
 first two lines are O(1). the for loop iterates log(n) times. the contents inside for loop is O(1), so the entire for loop is log(n). the dominant of these two is log(n), which is the function's runtime. 
 
 # d.) Show the top level recursive algorithm for maxsubarray problem
-> [!info] tbh i totally i read off of the wikipedia page's code 
-> https://en.wikipedia.org/wiki/Maximum_subarray_problem
+
 ```python
 maxSubarray(arr, leftIndex, rightIndex):
     if leftIndex == rightIndex:
