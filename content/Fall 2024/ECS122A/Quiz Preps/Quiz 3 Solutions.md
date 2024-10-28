@@ -59,28 +59,28 @@ first two lines are O(1). the for loop iterates log(n) times. the contents insid
 # d.) Show the top level recursive algorithm for maxsubarray problem
 
 ```python
-maxSubarray(arr, leftIndex, rightIndex):
-    if leftIndex == rightIndex:
-        return arr[leftIndex]
+maxSubarray(arr, left_index, right_index):
+    if left_index == right_index:
+        return arr[left_index]
     
-    midIndex = (leftIndex + rightIndex) / 2
-    max_left = maxSubarray(arr[0..midIndex])
-    max_right = maxSubarray(arr[midIndex+1..rightIndex])
-    max_cross = maxCross(arr, leftIndex, midIndex, rightIndex)
+    mid_index = (left_index + right_index) / 2
+    max_left = maxSubarray(arr[0..mid_index])
+    max_right = maxSubarray(arr[mid_index+1..rightIndex])
+    max_cross = maxCross(arr, leftIndex, mid_index, right_index)
     
     return max(max_left, max_right, max_cross)
 
-maxCross(arr, leftIndex, midIndex, rightIndex):
+maxCross(arr, left_index, mid_index, right_index):
     left_max = float('-inf')
     total = 0
-    for (i = mid to leftIndex-1; i--):
+    for (i = mid to left_index-1; i--):
         total += arr[i]
         if total > left_max:
             left_max = total
 
     right_sum = float('-inf')
     total = 0
-    for (i = mid+1 to rightIndex+1):
+    for (i = mid_index+1 to right_index+1):
         total += arr[i]
         if total > right_max:
             right_max = total
