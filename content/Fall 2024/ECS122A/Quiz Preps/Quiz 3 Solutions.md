@@ -1,6 +1,5 @@
 > [!info] v1 Patch Notes - Oct. 25, 4:00 pm
-> i bombed the midterm :') me when 40 min delay. ive been slacking a bit... but this quiz doesnt seem so bad at least. ok luna blog uhh sorry i got this one out kinda late i havent done 2 yet ill do it in v2 im playing smash rn lol
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241025200715.png | 300]]
+> i bombed the midterm :')
 
 > [!info] v2 Patch Notes - Oct. 26
 > rhjsdfhdfsjfsrjkfhsrjfjsrgfhjsrgfhsjrgfshjrgfshjrgfsjhrgsfhgrsjhsgrfjhsrgfjhsrf
@@ -26,6 +25,7 @@ $$
 ## Recursion Tree  
 ![[Fall 2024/ECS122A/Quiz Preps/src/III-b.excalidraw.svg]]  
 Work per level: $n$ as seen in the image above  
+do like a sum thing i guess sorry i dont have all the math for it yet... wip  
 # c.) Design a function that does the following
 
 > **Name**: Silly
@@ -55,6 +55,7 @@ Silly(x):
 first two lines are O(1). the for loop iterates log(n) times. the contents inside for loop is O(1), so the entire for loop is log(n). the dominant of these two is log(n), which is the function's runtime. 
 
 # d.) Show the top level recursive algorithm for maxsubarray problem
+work in progress
 
 ```python
 maxSubarray(arr, left_index, right_index):
