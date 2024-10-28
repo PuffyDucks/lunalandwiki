@@ -70,6 +70,7 @@ maxSubarray(arr, left_index, right_index):
     
     return max(max_left, max_right, max_cross)
 
+# u dont acrtually need this part cuz just top level but ima show anyways for ur reference
 maxCross(arr, left_index, mid_index, right_index):
     left_max = float('-inf')
     total = 0
