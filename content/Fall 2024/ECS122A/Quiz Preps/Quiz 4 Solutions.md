@@ -5,7 +5,7 @@
 ## Part 1.) Design an algorithm that follows this strategy.
 ```python
 maxActivities(activities):
-    sorted_activities = sortBackwardsByFinish(activities)
+    sorted_activities = sortBackwardsByStart(activities)
     optimal_solution = []
     earliest_start = Inf
 
