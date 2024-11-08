@@ -16,7 +16,7 @@ price[1] = 10. no other cuts to make, so we put these in our array
 oke now **length 2**  
 cut size 1, price[1] + opt_price[1] = 10 + 10 = 20  
 cut size 2, price[2] + 0 = 24  
-cut size **2** has highest price  
+**cut size 2** has highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ cut size **2** has highest price
 cut size 1, price[1] + opt_price[2] = 10 + 24 = 34  
 cut size 2, price[2] + opt_price[1] = 24 + 10 = 34  
 cut size 3, price[3] + 0 = 30 + 0 = 30  
-cut size **1** is the smallest cut with the highest price
+**cut size 1** is the smallest cut with the highest price
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ cut size 1, price[1] + opt_price[3] = 10 + 34 = 44
 cut size 2, price[2] + opt_price[2] = 24 + 24 = 48  
 cut size 2, price[3] + opt_price[1] = 30 + 10 = 44  
 cut size 3, price[4] + 0 = 40 + 0 = 340  
-cut size **2** has highest price  
+**cut size 2** has highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ cut size 2, price[2] + opt_price[3] = 24 + 34 = 58
 cut size 2, price[3] + opt_price[2] = 34 + 24 = 58  
 cut size 2, price[4] + opt_price[1] = 48 + 10 = 58  
 cut size 3, price[5] + 0 = 40 + 0 = 45  
-cut size **1** is the smallest cut with the highest price  
+**cut size 1** is the smallest cut with the highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
