@@ -87,7 +87,10 @@ cutRod(n, sell_prices[]):
     return max_price
 ```
 ## b) What is the recurrence of this new problem
-ummm the runtime is $O(2^n)$
+> [!question] what am i even doing
+> idk what im talking about
+
+ummm the runtime is $O(2^n)$ i guess cuz for every length in $n$ we decide to cut or not cut and this splits into 2 branches so every length we're doubling the num of combinations we check waowwwwww yeah i def did not prove this one correctly ok next problem!! 
 ## c) Create a DP algorithm for this new problem and state its run-time.
 pretty similar to the standard rod cutting problem, but now when we make our optimal cut table we must factor in the $3 fee. 
 ```python
@@ -112,4 +115,8 @@ cutRod(n, sell_prices[]):
 first line is $O(n)$. then the for loop iterates from `1` to `n`, and is thus $O(n)$. the line afterwards is $O(1)$, but the following for loop is from `1` to `length-1`. since rod_length is $O(n)$, then this for loop is also $O(n)$. then, everything inside that for loop is $O(1)$. with all this, we can determine the runtime of the program to be $O(n)\cdot O(n)\cdot O(1)=O(n^2)$.
 
 ## d) Prove that this problem has an optimal substructure
-nah
+> [!question] lmao
+> idk how to do this one man 
+
+optimal solution is found with $R(n) = \max\limits_{1 \leq i \leq n} \{ p[i] + R(n - i) \}$  
+$R(n)$ is constructed with the subproblem $R(n - i)$ therefore it is a optimal substructure!!!! wow!!!! 
