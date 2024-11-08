@@ -80,7 +80,6 @@ cutRod(n, sell_prices[]):
 	# for loop iterates to n-1 since we already account for the price of 
 	# a cut_size of n, aka no cut, above.  
     for (cut_size=1 to n-1):
-    
         # subtract 3 every time a cut is made
         tmp_price = sell_prices[cut_size] + cutRod(n - cut_size, prices) - 3
         max_price = max(max_price, tmp_price)
@@ -96,7 +95,6 @@ cutRod(n, sell_prices[]):
     optimal_price = [0] * (n + 1)
     
     for (rod_length=1 to n):
-        
         # instead of setting the initial optimal price to -Inf or 0, we set it to 
         # sell_prices[rod_length] to account for the scenario where we don't make any
         # cuts, so theres no need to subtract the cut fee. 
@@ -105,7 +103,6 @@ cutRod(n, sell_prices[]):
         # for loop iterates to rod_length-1 since we already account for the price of 
         # a cut_size of rod_length, aka no cut, above.  
         for (cut_size=1 to rod_length-1):
-        
             # subtract 3 for the cut fee
             tmp_price = sell_prices[cut_size] + optimal_price[rod_length - cut_size] - 3
             optimal_price[rod_length] = max(tmp_price, optimal_price[rod_length])
