@@ -112,6 +112,7 @@ cutRod(n, sell_prices[]):
 ```
 
 ### Runtime
-first two lines are $O(1)$. then the for loop iterates from `1` to `n`, and is thus $O(n)$. the line afterwards is $O(1)$, but the following for loop is from `1` to `length-1`. since rod_length is $O(n)$, then this for loop is also $O(n)$. then, everything inside that for loop is $O(1)$. with all this, we can determine the runtime of the program to be $O(n)\cdot O(n)=O(n^2)$.
+first line is $O(n)$. then the for loop iterates from `1` to `n`, and is thus $O(n)$. the line afterwards is $O(1)$, but the following for loop is from `1` to `length-1`. since rod_length is $O(n)$, then this for loop is also $O(n)$. then, everything inside that for loop is $O(1)$. with all this, we can determine the runtime of the program to be $O(n)\cdot O(n)\cdot O(1)=O(n^2)$.
 
-## d) Prove that this problem has an optimal substructure .
+## d) Prove that this problem has an optimal substructure
+nah
