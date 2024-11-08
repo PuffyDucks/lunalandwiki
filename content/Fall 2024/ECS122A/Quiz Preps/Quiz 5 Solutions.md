@@ -13,20 +13,20 @@ price[1] = 10. no other cuts to make, so we put these in our array
 | optimal price | 10  |     |     |     |     |
 | traceback     | 1   |     |     |     |     |
 
-oke now **length 2**
-cut size 1, price[1] + opt_price[1] = 10 + 10 = 20
-cut size 2, price[2] + 0 = 24
-cut size **2** has highest price
+oke now **length 2**  
+cut size 1, price[1] + opt_price[1] = 10 + 10 = 20  
+cut size 2, price[2] + 0 = 24  
+cut size **2** has highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
 | optimal price | 10  | 24  |     |     |     |
 | traceback     | 1   | 2   |     |     |     |
 
-**length 3**
-cut size 1, price[1] + opt_price[2] = 10 + 24 = 34
-cut size 2, price[2] + opt_price[1] = 24 + 10 = 34
-cut size 3, price[3] + 0 = 30 + 0 = 30
+**length 3**  
+cut size 1, price[1] + opt_price[2] = 10 + 24 = 34  
+cut size 2, price[2] + opt_price[1] = 24 + 10 = 34  
+cut size 3, price[3] + 0 = 30 + 0 = 30  
 cut size **1** is the smallest cut with the highest price
 
 | length        | 1   | 2   | 3   | 4   | 5   |
@@ -34,34 +34,34 @@ cut size **1** is the smallest cut with the highest price
 | optimal price | 10  | 24  | 34  |     |     |
 | traceback     | 1   | 2   | 1   |     |     |
 
-**length 4**
-cut size 1, price[1] + opt_price[3] = 10 + 34 = 44
-cut size 2, price[2] + opt_price[2] = 24 + 24 = 48
-cut size 2, price[3] + opt_price[1] = 30 + 10 = 44
-cut size 3, price[4] + 0 = 40 + 0 = 340
-cut size **2** has highest price
+**length 4**  
+cut size 1, price[1] + opt_price[3] = 10 + 34 = 44  
+cut size 2, price[2] + opt_price[2] = 24 + 24 = 48  
+cut size 2, price[3] + opt_price[1] = 30 + 10 = 44  
+cut size 3, price[4] + 0 = 40 + 0 = 340  
+cut size **2** has highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
 | optimal price | 10  | 24  | 34  | 48  |     |
 | traceback     | 1   | 2   | 1   | 2   |     |
 
-**length 5**
-cut size 1, price[1] + opt_price[4] = 10 + 48 = 58
-cut size 2, price[2] + opt_price[3] = 24 + 34 = 58
-cut size 2, price[3] + opt_price[2] = 34 + 24 = 58
-cut size 2, price[4] + opt_price[1] = 48 + 10 = 58
-cut size 3, price[5] + 0 = 40 + 0 = 45
-cut size **1** is the smallest cut with the highest price
+**length 5**  
+cut size 1, price[1] + opt_price[4] = 10 + 48 = 58  
+cut size 2, price[2] + opt_price[3] = 24 + 34 = 58  
+cut size 2, price[3] + opt_price[2] = 34 + 24 = 58  
+cut size 2, price[4] + opt_price[1] = 48 + 10 = 58  
+cut size 3, price[5] + 0 = 40 + 0 = 45  
+cut size **1** is the smallest cut with the highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
 | ------------- | --- | --- | --- | --- | --- |
 | optimal price | 10  | 24  | 34  | 48  | 58  |
 | traceback     | 1   | 2   | 1   | 2   | 1   |
 
-yay we have our arrays. now we find optimal cut for rod length 5
-looking at the traceback array, we first cut off a 1 length rod. this leaves us with a rod of length 4, which the traceback table says to cut a length of 2 next. finally this leaves us with a 2 long rod, which the traceback says cut a length of 2 again. this leaves us with no rod, so our final optimal cuts are of **length 1, 2, and 2**.  
-our traceback array is **S = [1, 2, 1, 2, 1]**
+yay we have our arrays. now we find optimal cut for rod length 5. looking at the traceback array, we first cut off a 1 length rod. this leaves us with a rod of length 4, which the traceback table says to cut a length of 2 next. finally this leaves us with a 2 long rod, which the traceback says cut a length of 2 again. this leaves us with no rod, so:  
+
+our final optimal cuts are of **length 1, 2, and 2**. our traceback array is **S = [1, 2, 1, 2, 1]**
 
 # 2) Given S[10]=4 S[7]=7 and S[6]=3 and S[3]=2 What is the optimal cut strategy?
 ok similar to what we did at end of problem 1. taking a rod of length 10, S[10]=4 so we want to first cut off a 4 long piece. this leaves a 6 long piece, and S[6]=3. thus lets cut off a 3 long piece, leaving us with a 3 long piece. S[3] = 2, so we cut off a 2 long piece, leaving us with a 1 long piece. the cuts we need to make are of lengths **4, 3, 2, 1**.
