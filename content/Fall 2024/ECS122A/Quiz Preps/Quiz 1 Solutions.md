@@ -1,9 +1,11 @@
+[QUIZ PREP QUESTIONS TO BE FOUND HERE](https://canvas.ucdavis.edu/courses/902574/pages/test-prep-page) 
+
 **Quiz 1 Prep - There are no solutions to these they are hints for the test. Work together or with the me or the TAs to solve these.**
 
 > [!question] whats that??
 > hmmm no solutions she says?!?1? ummm live miku reaction :3
 > 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241002205019.png | 200]]
+> ![[Fall 2024/ECS122A/Quiz Preps/src/miku_thumbs_up.png| 200]]
 > 
 > anyways heres the quiz 1 solutions v3 by the one and only real hatsune miku 
 

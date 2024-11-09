@@ -1,9 +1,9 @@
 > [!question]  v1 Patch Notes 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241107151608.png | 200]]  
+> ![[Fall 2024/ECS122A/Quiz Preps/src/missing_image.png| 200]]  
 > girl wdym 'image.png' 😭😭😭 
 
 # 1) Run Rod-Cutting DP algorithm including traceback array S[i]. What is the optimal cut?
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241108135121.png | 300]]
+![[Fall 2024/ECS122A/Quiz Preps/src/V-I.png| 300]]
 
 starting with **length 1**: 
 price[1] = 10. no other cuts to make, so we put these in our array
@@ -14,7 +14,7 @@ price[1] = 10. no other cuts to make, so we put these in our array
 | traceback     | 1   |     |     |     |     |
 
 oke now **length 2**  
-cut size 1, price[1] + opt_price[1] = 10 + 10 = 20  
+cut size 1, price[1] + R[1] = 10 + 10 = 20  
 cut size 2, price[2] + 0 = 24  
 **cut size 2** has highest price  
 
@@ -24,8 +24,8 @@ cut size 2, price[2] + 0 = 24
 | traceback     | 1   | 2   |     |     |     |
 
 **length 3**  
-cut size 1, price[1] + opt_price[2] = 10 + 24 = 34  
-cut size 2, price[2] + opt_price[1] = 24 + 10 = 34  
+cut size 1, price[1] + R[2] = 10 + 24 = 34  
+cut size 2, price[2] + R[1] = 24 + 10 = 34  
 cut size 3, price[3] + 0 = 30 + 0 = 30  
 **cut size 1** is the smallest cut with the highest price
 
@@ -35,10 +35,10 @@ cut size 3, price[3] + 0 = 30 + 0 = 30
 | traceback     | 1   | 2   | 1   |     |     |
 
 **length 4**  
-cut size 1, price[1] + opt_price[3] = 10 + 34 = 44  
-cut size 2, price[2] + opt_price[2] = 24 + 24 = 48  
-cut size 2, price[3] + opt_price[1] = 30 + 10 = 44  
-cut size 3, price[4] + 0 = 40 + 0 = 340  
+cut size 1, price[1] + R[3] = 10 + 34 = 44  
+cut size 2, price[2] + R[2] = 24 + 24 = 48  
+cut size 2, price[3] + R[1] = 30 + 10 = 44  
+cut size 3, price[4] + 0 = 40 + 0 = 40  
 **cut size 2** has highest price  
 
 | length        | 1   | 2   | 3   | 4   | 5   |
@@ -47,10 +47,10 @@ cut size 3, price[4] + 0 = 40 + 0 = 340
 | traceback     | 1   | 2   | 1   | 2   |     |
 
 **length 5**  
-cut size 1, price[1] + opt_price[4] = 10 + 48 = 58  
-cut size 2, price[2] + opt_price[3] = 24 + 34 = 58  
-cut size 2, price[3] + opt_price[2] = 34 + 24 = 58  
-cut size 2, price[4] + opt_price[1] = 48 + 10 = 58  
+cut size 1, price[1] + R[4] = 10 + 48 = 58  
+cut size 2, price[2] + R[3] = 24 + 34 = 58  
+cut size 2, price[3] + R[2] = 34 + 24 = 58  
+cut size 2, price[4] + R[1] = 48 + 10 = 58  
 cut size 3, price[5] + 0 = 40 + 0 = 45  
 **cut size 1** is the smallest cut with the highest price  
 
@@ -61,10 +61,10 @@ cut size 3, price[5] + 0 = 40 + 0 = 45
 
 yay we have our arrays. now we find optimal cut for rod length 5. looking at the traceback array, we first cut off a 1 length rod. this leaves us with a rod of length 4, which the traceback table says to cut a length of 2 next. finally this leaves us with a 2 long rod, which the traceback says cut a length of 2 again. this leaves us with no rod, so:  
 
-our final optimal cuts are of **length 1, 2, and 2**. our traceback array is **S = [1, 2, 1, 2, 1]**
+our final optimal cuts are of **[1, 2, 2]** and our traceback array is **S = [1, 2, 1, 2, 1]**
 
 # 2) Given S[10]=4 S[7]=7 and S[6]=3 and S[3]=2 What is the optimal cut strategy?
-ok similar to what we did at end of problem 1. taking a rod of length 10, S[10]=4 so we want to first cut off a 4 long piece. this leaves a 6 long piece, and S[6]=3. thus lets cut off a 3 long piece, leaving us with a 3 long piece. S[3] = 2, so we cut off a 2 long piece, leaving us with a 1 long piece. the cuts we need to make are of lengths **4, 3, 2, 1**.
+ok similar to what we did at end of problem 1. taking a rod of length 10, S[10]=4 so we first cut off a 4 long piece. this leaves a 6 long piece, and S[6]=3. thus lets cut off a 3 long piece, leaving us with a 3 long piece. S[3] = 2, so we cut off a 2 long piece, leaving us with a 1 long piece. the cuts we need to make are of lengths **[4, 3, 2, 1]**.
 # 3) Given rod cutting problem is changed so that you have to pay $3 dollars every time you cut the rod
 ## a) Solve via BF and provide runtime
 **Recursive Method**
@@ -88,28 +88,10 @@ cutRod(n, sell_prices[]):
     return max_price
 ```
 
-**Non-Recursive Method**  
-idk if we need this lol  
-```python
-cutRod(n, sell_prices[]):
-    max_price = -Inf
-
-    # using bits here we so we iterating thru all binary combinations of cuts.
-    # number of possible cuts in rod of length n is n-1
-    for (i=0 to 2^(n-1) - 1):
-        tmp_price = 0;
-        tmp_length = 0;
-        
-        # iterate thru bits
-        for (j=0 to n-2):
-            tmp_length++
-            if (i >> j) & 1:    # check for cut
-                tmp_price += sell_prices[tmp_length]
-                tmp_length = 0
-                
-        max_price = max(max_price, tmp_price)
-```
-## b) What is the recurrence of this new problem
+runtime of bruteforce is $O(2^n)$ cuz for every length of the rod, we can choose to cut or not cut. this doubles the number of possible combinations we must solve for, giving us $O(2^n)$
+## b) What is the recurrence of this new problem  
+with brute force, running T(n) means we can make cuts anywhere from length 1 to n. we then recursively run the algorithm on the remaining piece. this means we recursively call the function for every value from `1` up to `n-1`. 
+![[Fall 2024/ECS122A/Quiz Preps/src/V-III-b.svg | 600]]  
 $$
 T(n)=\sum\limits_{j=1}^{n-1}T(j)+1
 $$
@@ -124,7 +106,7 @@ cutRod(n, sell_prices[]):
         # instead of setting the initial optimal price to -Inf or 0, we set it to 
         # sell_prices[rod_length] to account for the scenario where we don't make any
         # cuts, so theres no need to subtract the cut fee. 
-		optimal_price[rod_length] = sell_prices[rod_length]
+        optimal_price[rod_length] = sell_prices[rod_length]
 
         # for loop iterates to rod_length-1 since we already account for the price of 
         # a cut_size of rod_length, aka no cut, above.  

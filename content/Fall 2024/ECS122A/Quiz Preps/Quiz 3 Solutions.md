@@ -1,5 +1,6 @@
 > [!info] v1 Patch Notes - Oct. 25, 4:00 pm
-> i bombed the midterm :')
+> i bombed the midterm :') me when 40 min delay. ive been slacking a bit... but this quiz doesnt seem so bad at least. ok luna blog uhh sorry i got this one out kinda late i havent done 2 yet ill do it in v2 im playing smash rn lol
+> ![[Fall 2024/ECS122A/Quiz Preps/src/smash.png| 300]]
 
 > [!info] v2 Patch Notes - Oct. 26
 > rhjsdfhdfsjfsrjkfhsrjfjsrgfhjsrgfhsjrgfshjrgfshjrgfsjhrgsfhgrsjhsgrfjhsrgfjhsrf
@@ -21,38 +22,12 @@ $$
 $$
 # b.) Use all **possible**  method to find T(n)=T(2n/3)+T(n/3)+n to find the closed form of the T(n)  
 > [!warning] ermm
-> i have been informed masters theorem and substitution are not possible in this unbalanced form. whether this is true or not i have no idea but heres my attempts...
+> i have been informed masters theorem and substitution are not possible in this unbalanced form. heres recursion tho
 ## Recursion Tree  
 ![[Fall 2024/ECS122A/Quiz Preps/src/III-b.excalidraw.svg]]  
 Work per level: $n$ as seen in the image above  
-do like a sum thing i guess sorry i dont have all the math for it yet... wip  
-## Substitution  
-Hypothesis: $T(n)=O(n\log(n))$
-Assuming $T(n)\leq cn\log(n)$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\frac{k}{3}\right)\leq c\frac{k}{3}\log\left(\frac{k}{3}\right)$ and $T\left(\frac{2k}{3}\right)\leq c\frac{2k}{3}\log\left(\frac{2k}{3}\right)$. Thus, we know that
-$$
-\begin{align}
-T(k)&=T\left(\frac{2k}{3}\right)+T\left(\frac{k}{3}\right)+k \\
-& \leq c\frac{2k}{3}\log\left(\frac{2k}{3}\right)+c\frac{k}{3}\log\left(\frac{k}{3}\right)+k \\
-& = c \frac{2k}{3} \log(2) + c k \log(k) - c k \log(3) + k \\
-\end{align}
-$$
-From this, we want to prove that 
-$$
-c \frac{2k}{3} \log(2) + c k \log(k) - c k \log(3) + k\leq ck\log(k)
-$$
-We can divide by $k$ to rewrite the inequality as
-$$
-c \frac{2}{3} \log(2) + c \log(k) - c \log(3) + 1\leq c\log(k)
-$$
-If we use base 10 for the log, then we can rewrite the entire inequality as  
-$$
-c\log(k)-0.2764c+1\leq c\log(k)
-$$
-This allows us to solve for $c$, getting
-$$
-c\geq3.618
-$$
-Thus, $T(n)=O(n\log(n))$ is proven by definition of big O as $T(n)\leq cn\log(n)$ for $c=4$ and $n_0=1$.
+Depth: $O(\log(n))$ since we're multiplying $n$ by a constant less than 1 each time we plug it in.  
+Runtime: $O(n\log(n))$  
 # c.) Design a function that does the following
 
 > **Name**: Silly
@@ -82,7 +57,6 @@ Silly(x):
 first two lines are O(1). the for loop iterates log(n) times. the contents inside for loop is O(1), so the entire for loop is log(n). the dominant of these two is log(n), which is the function's runtime. 
 
 # d.) Show the top level recursive algorithm for maxsubarray problem
-work in progress
 
 ```python
 maxSubarray(arr, left_index, right_index):

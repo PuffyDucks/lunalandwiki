@@ -1,18 +1,18 @@
 > [!info] v1 Patch Notes - Oct. 9, 5:49 am
 > hey losers :3 !!! its 5:49 am i didnt check any of my work pls ping me with any errors so i can revise a v2, , ,,, i should just host a website for these.... im hungry.. . could go for a warm bowl of soondubu rn. god i have to wake up at 6:30 im cooked time to faint in bed. miku out!! 🛌🌙
 > 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241009020843.png|200]]
+> ![[Fall 2024/ECS122A/Quiz Preps/src/miku_plead.png|200]]
 
 > [!info] v2 Patch Notes - Oct 11, 3:25 am
 > filled out q1 w/ explanation of prev problems, added to question 2.b, included some formulas, uhhhh i made the soondubu i talked abt in v1 notes lol oh yeah we got an actual website now yippeeeeeeeeeeeeeeeee!!!!!
 > 
-> ![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.jpg | 300]]
+> ![[Fall 2024/ECS122A/Quiz Preps/src/soondubu.jpg| 300]]
 # 1) Code analysis like quiz1 or hw1 or any class code analysis 
 > [!abstract] Note From Miku
 > uhh uhhhhnmmm ermmm she didnt really give problems here... so instead i will show you guys my thought process with the hw ones...
 
 ## hw1 problem 5.e
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010152949.png]]
+![[Fall 2024/ECS122A/Quiz Preps/src/I-V-e.png]]
 
 what i usually do w these nested loops is find the number of iterations each loop/function has in $O(n)$ form. so at the top we have a for loop iterating `i` from 0 to n. obviously this makes `i`'s iterations $O(n)$. 
 
@@ -25,14 +25,14 @@ finally, within the innermost loop is a $O(1)$ line, `++sum`. multiply all those
 > watch out when doing these problems!!! this first example was much easier bc the iterators were only affected by the for loop and nothing else. additionally, the contents of the innermost for loop was O(1), keeping things simple. she will probably give more complex problems on exams and quizzes!! make sure you look thru the code line by line and deeply analyze how certain lines could affect other parts. below ill go over two examples of some things to pay attention for.
 
 ## hw1 problem 10
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010164302.png]]
+![[Fall 2024/ECS122A/Quiz Preps/src/I-X.png]]
 
 questions like hw1 problem 10 modify the iterator values outside of the main for loop iteration. keep the behavior of these in mind and think about how they affect each loop. if we think about what `j` does here, it adds 1 to `j` every **inner** for loop iteration; this causes `j` to increment by 2 instead of 1, which is still $O(n)$. then, at the end of the inner for loop, `i` has increased by n/2 due to the line `i++`. This means the **outer** for loop only runs exactly twice, which is an O(1) operation. 
 
 other thing to watch out for the innermost for loop may not contain an O(1) operation! heres one a lot of ppl struggled with: 
 
 ## hw1 problem 5.f
-![[Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241010165621.png]]
+![[Fall 2024/ECS122A/Quiz Preps/src/I-V-f.png]]
 
 lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $O(n)$. `j` iterates from 1 to `i`$^2$ and is thus $O(n^2)$. the innermost loop iterates `k` from 0 to `j`, which is again $O(n^2)$. however, an if statement in the 2nd loop prevents this problem from being identical to problem e. the innermost loop is nested in an if statement which checks if `j % i == 0`. this means although `j` iterates $O(n^2)$ times, its contents only run every `i` times. using this information, we can divide `j`'s iterations by `i`'s iterations to determine the second loop's content only runs $O(n)$ times, not $O(n^2)$. we can multiply these values and calculate the runtime as $O(n)\cdot \dfrac{O(n^2)}{O(n)}\cdot O(n^2)\cdot O(1)=O(n^4)$.
 # 2) Solve via recurrence tree, and **confirm via substitution.**
@@ -53,9 +53,9 @@ lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $
 > As a bonus heres **Masters Theorem**. Makes lots of problems so easy :D
 > For $T(n)=aT\left(\dfrac{n}{b}\right)+O(n^d)$,
 > 
-> if $a>b^d$ then the recurrence is $O(n^{log_B(A)})$.
+> if $a>b^d$ then the recurrence is $O(n^{\log_B(A)})$.
 > 
-> if $a=b^d$ then the recurrence is $O(n^dlog(n))$.
+> if $a=b^d$ then the recurrence is $O(n^d\log(n))$.
 > 
 > if $a<b^d$ then the recurrence is $O(n^d)$.
 ## T(n)=27T(n/3)+5n^3  
@@ -63,49 +63,49 @@ lets start with loop analysis on this one. `i` iterates from 1 to n, so that's $
 
 Work: $5n^3$
 Depth: Largest recursive constant is 1/3.
-$k=log_3(n)$
+$k=\log_3(n)$
 $$
 \begin{align*}
-\sum\limits_{k=0}^{log_3(n)}5n^3&=(1+log_3(n))(5n^3)\\
-&=5n^3log_3(n)+5n^3\\
-&=O(n^3log(n))
+\sum\limits_{k=0}^{\log_3(n)}5n^3&=(1+\log_3(n))(5n^3)\\
+&=5n^3\log_3(n)+5n^3\\
+&=O(n^3\log(n))
 \end{align*}
 $$
-**Substitution**
+**Substitution**  
 
-Hypothesis: $T(n)=O(n^3log(n))$
-Assuming $T(n)\leq cn^3log(n)$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\frac{k}{3}\right)\leq c(\frac{k}{3})^3log\left(\frac{k}{3}\right)$. Thus, we know that
+Hypothesis: $T(n)=O(n^3\log(n))$
+Assuming $T(n)\leq cn^3\log(n)$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\frac{k}{3}\right)\leq c(\frac{k}{3})^3\log\left(\frac{k}{3}\right)$. Thus, we know that
 $$
-T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^3\leq ck^3log\left(\dfrac{k}{3}\right)+5k^3
+T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^3\leq ck^3\log\left(\dfrac{k}{3}\right)+5k^3
 $$
 From this, we want to prove that 
 $$
-ck^3log\left(\frac{k}{3}\right)+5k^3\leq ck^3log(k)
+ck^3\log\left(\frac{k}{3}\right)+5k^3\leq ck^3\log(k)
 $$
 We can divide by $k^3$ to rewrite the inequality as
 $$
-c\cdot\log\left(\dfrac{k}{3}\right)+5\leq c\cdot log(k)
+c\cdot\log\left(\dfrac{k}{3}\right)+5\leq c\log(k)
 $$
 Logarithm rules further simplify this inequality to
 $$
-c\cdot log(k) - c\cdot log(3) + 5 \leq c\cdot log(k)
+c\log(k) - c\log(3) + 5 \leq c\log(k)
 $$
-By cancelling out $c\cdot log(k)$ and treating the log base as 3 we can solve for $c$ and get
+By cancelling out $c\log(k)$ and treating the log base as 3 we can solve for $c$ and get
 $$
 c\geq5
 $$
-Thus, $T(n)=O(n^3log(n))$ is proven by definition of big O as $T(n)\leq cn^3log(n)$ for $c=5$ and $n_0=1$
+Thus, $T(n)=O(n^3\log(n))$ is proven by definition of big O as $T(n)\leq cn^3\log(n)$ for $c=5$ and $n_0=1$
 ## T(n)=27T(n/3)+5n^2  
 ![[Fall 2024/ECS122A/Quiz Preps/src/II-II-B.excalidraw.svg|600]]
 
 Work: $3^i(5n^2)$
 Depth: Largest recursive constant is 1/3.
-$k=log_3(n)$
+$k=\log_3(n)$
 
 $$
 \begin{align*}
-\sum\limits_{k=0}^{log_3(n)}3^k(5n^2)
-&=5n^2\dfrac{(3^{log_3(n)+1}-1)}{3-1} \\
+\sum\limits_{k=0}^{\log_3(n)}3^k(5n^2)
+&=5n^2\dfrac{(3^{\log_3(n)+1}-1)}{3-1} \\
 &=5n^2\dfrac{(3n-1)}{2} \\
 &=\dfrac{15}{2}n^3-\dfrac{5}{2}n^2 \\
 & =O(n^3)
@@ -155,20 +155,19 @@ As $O(n^3-n^2)=O(n^3)$, we have proven $T(n)=O(n^3)$ through definition of big O
 
 Work: $\dfrac{5n^4}{3^i}$
 Depth: Largest recursive constant is 1/3.
-$k=log_3(n)$
+$k=\log_3(n)$
 $$
 \begin{align*}
-\sum\limits_{k=0}^{log_3(n)}\dfrac{5n^4}{3^k}
+\sum\limits_{k=0}^{\log_3(n)}\dfrac{5n^4}{3^k}
 & \leq\sum\limits_{k=0}^{\infty}\dfrac{5n^4}{3^k} \\
 & =\dfrac{5n^4}{1-\dfrac{1}{3}} \\
 & =\dfrac{15}{2}n^4 \\
 & =O(n^4)
 \end{align*}
-$$
-
+$$  
 **Substitution**
-
 Hypothesis: $T(n)=O(n^4)$
+
 Assuming $T(n)\leq cn^4$ for $\forall n\leq k-1$, for great enough $k$ we can use this assumption to determine that $T\left(\dfrac{k}{3}\right)\leq \dfrac{c}{81}k^4$. Thus, we know that
 $$
 T(k)=27\cdot T\left(\frac{k}{3}\right)+5k^4\leq\dfrac{c}{3}k^4+5k^4
@@ -215,10 +214,10 @@ Recurrence equation: $T(n)=2T\left(\dfrac{n}{2}\right)+O(1)$
 
 Work: $2^k$
 Depth: Largest recursive constant is 1/2.
-$k=log_2(n)$
+$k=\log_2(n)$
 $$
 \begin{align*}
-\sum\limits_{k=0}^{log_2(n)}2^k&=\dfrac{2^{log_2(n)+1}-1}{2-1} \\
+\sum\limits_{k=0}^{\log_2(n)}2^k&=\dfrac{2^{\log_2(n)+1}-1}{2-1} \\
 & =2n-1 \\
 & =O(n)
 \end{align*}
