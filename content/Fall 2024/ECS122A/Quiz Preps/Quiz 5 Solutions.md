@@ -109,10 +109,10 @@ cutRod(n, sell_prices[]):
         max_price = max(max_price, tmp_price)
 ```
 ## b) What is the recurrence of this new problem
-> [!question] what am i even doing
-> are we supposed to do like a recursion proof or... cuz i did not do that :3
+$$
+T(n)=\sum\limits_{j=0}^{n-1}T(j)+1
+$$
 
-ummm the runtime is $O(2^n)$ i guess cuz for every length in $n$ we decide to cut or not cut and this splits into 2 branches so every length we're doubling the num of combinations we check waowwwwww yeah i def did not prove this one correctly ok next problem!! 
 ## c) Create a DP algorithm for this new problem and state its run-time.
 pretty similar to the standard rod cutting problem, but now when we make our optimal cut table we must factor in the $3 fee. 
 ```python
