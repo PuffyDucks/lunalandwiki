@@ -67,6 +67,7 @@ our final optimal cuts are of **length 1, 2, and 2**. our traceback array is **S
 ok similar to what we did at end of problem 1. taking a rod of length 10, S[10]=4 so we want to first cut off a 4 long piece. this leaves a 6 long piece, and S[6]=3. thus lets cut off a 3 long piece, leaving us with a 3 long piece. S[3] = 2, so we cut off a 2 long piece, leaving us with a 1 long piece. the cuts we need to make are of lengths **4, 3, 2, 1**.
 # 3) Given rod cutting problem is changed so that you have to pay $3 dollars every time you cut the rod
 ## a) Solve via BF and provide runtime
+**Recursive Method**
 ``` python
 cutRod(n, sell_prices[]):
     if n == 0:
@@ -86,9 +87,30 @@ cutRod(n, sell_prices[]):
     
     return max_price
 ```
+
+**Non-Recursive Method**
+```python
+cutRod(n, sell_prices[]):
+    max_price = -Inf
+
+    # using bits here we so we iterating thru all binary combinations of cuts.
+    # number of possible cuts in rod of length n is n-1
+    for (i=0 to 2^(n-1) - 1):
+        tmp_price = 0;
+        tmp_length = 0;
+        
+        # iterate thru bits
+        for (j=0 to n-2):
+            tmp_length++
+            if (i >> j) & 1:    # check for cut
+                tmp_price += sell_prices[tmp_length]
+                tmp_length = 0
+                
+        max_price = max(max_price, tmp_price)
+```
 ## b) What is the recurrence of this new problem
 > [!question] what am i even doing
-> idk what im talking about
+> are we supposed to do like a recursion proof or... cuz i did not do that :3
 
 ummm the runtime is $O(2^n)$ i guess cuz for every length in $n$ we decide to cut or not cut and this splits into 2 branches so every length we're doubling the num of combinations we check waowwwwww yeah i def did not prove this one correctly ok next problem!! 
 ## c) Create a DP algorithm for this new problem and state its run-time.
