@@ -88,7 +88,7 @@ cutRod(n, sell_prices[]):
     return max_price
 ```
 
-**Non-Recursive Method**
+**Non-Recursive Method**  i dont think we're supposed to use this lol
 ```python
 cutRod(n, sell_prices[]):
     max_price = -Inf
