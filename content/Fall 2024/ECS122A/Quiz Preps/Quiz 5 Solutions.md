@@ -88,7 +88,8 @@ cutRod(n, sell_prices[]):
     return max_price
 ```
 
-**Non-Recursive Method**  i dont think we're supposed to use this lol
+**Non-Recursive Method**  
+idk if we need this lol  
 ```python
 cutRod(n, sell_prices[]):
     max_price = -Inf
@@ -110,7 +111,7 @@ cutRod(n, sell_prices[]):
 ```
 ## b) What is the recurrence of this new problem
 $$
-T(n)=\sum\limits_{j=0}^{n-1}T(j)+1
+T(n)=\sum\limits_{j=1}^{n-1}T(j)+1
 $$
 
 ## c) Create a DP algorithm for this new problem and state its run-time.
