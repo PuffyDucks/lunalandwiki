@@ -90,11 +90,7 @@ cutRod(n, p[]):
 
 runtime of bruteforce is $O(2^n)$ cuz for every length of the rod, we can choose to cut or not cut. this doubles the number of possible combinations we must solve for, giving us $O(2^n)$
 ## b) What is the recurrence of this new problem  
-with brute force, running T(n) means we can make cuts anywhere from length 1 to n. we then recursively run the algorithm on the remaining piece. this means we recursively call the function for every value from `1` up to `n-1`. 
-![[Fall 2024/ECS122A/Quiz Preps/src/V-III-b.svg | 600]]  
-$$
-T(n)=\sum\limits_{j=1}^{n-1}T(j)+1
-$$
+$opt(n)=\min\limits_{x\in[1\dots n]}\left(p[x]+opt(n-x)\right)$
 
 ## c) Create a DP algorithm for this new problem and state its run-time.
 pretty similar to the standard rod cutting problem, but now when we make our optimal cut table we must factor in the $3 fee. 
