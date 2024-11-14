@@ -6,58 +6,58 @@
 ![[Fall 2024/ECS122A/Quiz Preps/src/V-I.png| 300]]
 
 starting with **length 1**: 
-price[1] = 10. no other cuts to make, so we put these in our array
+p[1] = 10. no other cuts to make, so we put these in our array
 
-| length        | 1   | 2   | 3   | 4   | 5   |
-| ------------- | --- | --- | --- | --- | --- |
-| optimal price | 10  |     |     |     |     |
-| traceback     | 1   |     |     |     |     |
+| length           | 1   | 2   | 3   | 4   | 5   |
+| ---------------- | --- | --- | --- | --- | --- |
+| optimal price, R | 10  |     |     |     |     |
+| traceback, S     | 1   |     |     |     |     |
 
 oke now **length 2**  
-cut size 1, price[1] + R[1] = 10 + 10 = 20  
-cut size 2, price[2] + 0 = 24  
+cut size 1, p[1] + R[1] = 10 + 10 = 20  
+cut size 2, p[2] + 0 = 24  
 **cut size 2** has highest price  
 
-| length        | 1   | 2   | 3   | 4   | 5   |
-| ------------- | --- | --- | --- | --- | --- |
-| optimal price | 10  | 24  |     |     |     |
-| traceback     | 1   | 2   |     |     |     |
+| length           | 1   | 2   | 3   | 4   | 5   |
+| ---------------- | --- | --- | --- | --- | --- |
+| optimal price, R | 10  | 24  |     |     |     |
+| traceback, S     | 1   | 2   |     |     |     |
 
 **length 3**  
-cut size 1, price[1] + R[2] = 10 + 24 = 34  
-cut size 2, price[2] + R[1] = 24 + 10 = 34  
-cut size 3, price[3] + 0 = 30 + 0 = 30  
+cut size 1, p[1] + R[2] = 10 + 24 = 34  
+cut size 2, p[2] + R[1] = 24 + 10 = 34  
+cut size 3, p[3] + 0 = 30 + 0 = 30  
 **cut size 1** is the smallest cut with the highest price
 
-| length        | 1   | 2   | 3   | 4   | 5   |
-| ------------- | --- | --- | --- | --- | --- |
-| optimal price | 10  | 24  | 34  |     |     |
-| traceback     | 1   | 2   | 1   |     |     |
+| length           | 1   | 2   | 3   | 4   | 5   |
+| ---------------- | --- | --- | --- | --- | --- |
+| optimal price, R | 10  | 24  | 34  |     |     |
+| traceback, S     | 1   | 2   | 1   |     |     |
 
 **length 4**  
-cut size 1, price[1] + R[3] = 10 + 34 = 44  
-cut size 2, price[2] + R[2] = 24 + 24 = 48  
-cut size 2, price[3] + R[1] = 30 + 10 = 44  
-cut size 3, price[4] + 0 = 40 + 0 = 40  
+cut size 1, p[1] + R[3] = 10 + 34 = 44  
+cut size 2, p[2] + R[2] = 24 + 24 = 48  
+cut size 2, p[3] + R[1] = 30 + 10 = 44  
+cut size 3, p[4] + 0 = 40 + 0 = 40  
 **cut size 2** has highest price  
 
-| length        | 1   | 2   | 3   | 4   | 5   |
-| ------------- | --- | --- | --- | --- | --- |
-| optimal price | 10  | 24  | 34  | 48  |     |
-| traceback     | 1   | 2   | 1   | 2   |     |
+| length           | 1   | 2   | 3   | 4   | 5   |
+| ---------------- | --- | --- | --- | --- | --- |
+| optimal price, R | 10  | 24  | 34  | 48  |     |
+| traceback, S     | 1   | 2   | 1   | 2   |     |
 
 **length 5**  
-cut size 1, price[1] + R[4] = 10 + 48 = 58  
-cut size 2, price[2] + R[3] = 24 + 34 = 58  
-cut size 2, price[3] + R[2] = 34 + 24 = 58  
-cut size 2, price[4] + R[1] = 48 + 10 = 58  
-cut size 3, price[5] + 0 = 40 + 0 = 45  
+cut size 1, p[1] + R[4] = 10 + 48 = 58  
+cut size 2, p[2] + R[3] = 24 + 34 = 58  
+cut size 2, p[3] + R[2] = 34 + 24 = 58  
+cut size 2, p[4] + R[1] = 48 + 10 = 58  
+cut size 3, p[5] + 0 = 40 + 0 = 45  
 **cut size 1** is the smallest cut with the highest price  
 
-| length        | 1   | 2   | 3   | 4   | 5   |
-| ------------- | --- | --- | --- | --- | --- |
-| optimal price | 10  | 24  | 34  | 48  | 58  |
-| traceback     | 1   | 2   | 1   | 2   | 1   |
+| length           | 1   | 2   | 3   | 4   | 5   |
+| ---------------- | --- | --- | --- | --- | --- |
+| optimal price, R | 10  | 24  | 34  | 48  | 58  |
+| traceback, S     | 1   | 2   | 1   | 2   | 1   |
 
 yay we have our arrays. now we find optimal cut for rod length 5. looking at the traceback array, we first cut off a 1 length rod. this leaves us with a rod of length 4, which the traceback table says to cut a length of 2 next. finally this leaves us with a 2 long rod, which the traceback says cut a length of 2 again. this leaves us with no rod, so:  
 
@@ -69,20 +69,20 @@ ok similar to what we did at end of problem 1. taking a rod of length 10, S[10]=
 ## a) Solve via BF and provide runtime
 **Recursive Method**
 ``` python
-cutRod(n, sell_prices[]):
+cutRod(n, p[]):
     if n == 0:
         return 0
 
 	# instead of setting the initial max_price to -Inf or 0, we set it to 
 	# sell_prices[n] to account for the scenario where we don't make any cuts,
 	# so theres no need to subtract the cut fee. 
-    max_price = sell_prices[n]
+    max_price = p[n]
 
 	# for loop iterates to n-1 since we already account for the price of 
 	# a cut_size of n, aka no cut, above.  
     for (cut_size=1 to n-1):
         # subtract 3 every time a cut is made
-        tmp_price = sell_prices[cut_size] + cutRod(n - cut_size, prices) - 3
+        tmp_price = p[cut_size] + cutRod(n - cut_size, prices) - 3
         max_price = max(max_price, tmp_price)
     
     return max_price
@@ -99,21 +99,21 @@ $$
 ## c) Create a DP algorithm for this new problem and state its run-time.
 pretty similar to the standard rod cutting problem, but now when we make our optimal cut table we must factor in the $3 fee. 
 ```python
-cutRod(n, sell_prices[]):
-    optimal_price = [0] * (n + 1)
+cutRod(n, p[]):
+    R = [0] * (n + 1)
     
     for (rod_length=1 to n):
         # instead of setting the initial optimal price to -Inf or 0, we set it to 
         # sell_prices[rod_length] to account for the scenario where we don't make any
         # cuts, so theres no need to subtract the cut fee. 
-        optimal_price[rod_length] = sell_prices[rod_length]
+        R[rod_length] = p[rod_length]
 
         # for loop iterates to rod_length-1 since we already account for the price of 
         # a cut_size of rod_length, aka no cut, above.  
         for (cut_size=1 to rod_length-1):
             # subtract 3 for the cut fee
-            tmp_price = sell_prices[cut_size] + optimal_price[rod_length - cut_size] - 3
-            optimal_price[rod_length] = max(tmp_price, optimal_price[rod_length])
+            tmp_price = p[cut_size] + R[rod_length - cut_size] - 3
+            R[rod_length] = max(tmp_price, R[rod_length])
 ```
 
 ### Runtime
