@@ -19,9 +19,8 @@ maxActivities(activities):
 sorting takes $O(\log(n))$. then when we iterate over activities, we do so $n$ times so that takes $O(n)$. thus sorting dominates and the algorithm has a runtime of $O(\log(n))$
 ## Part 3.) Provide a greedy choice proof for the algorithm
 > [!info] uhhh
-> my explanation sucks tbh but [heres a vid](https://www.youtube.com/watch?v=hVhOeaONg1Y) i liked that helped me understand it 
+> my explanation sucks tbh but [heres a vid](https://www.youtube.com/watch?v=hVhOeaONg1Y) i liked that helped me understand it. ima rework this one later
 
-assume $O$ is the optimal solution with maximum activities chosen, and is different from the greedy solution $S$. taking the last activity thats different between $S$ and $O$: as $S$'s algorithm requires the start time to be latest as possible, then the start time of the activity must be later than or equal to $O$'s activity's start time. thus it can replace the activity in $O$. then, as $S$ and $O$'s next different activity cannot conflict, this process can be repeated for each activity. finally, there are no leftover activities possible in $O$, as the first activity in $S$ must contain the earliest start time that does not conflict. 
 # Problem 2 
 ## Given $X=X_L+X_R$ where $X_L=X[1..n/2]$ and $X_R=X[n/2+1...n]$ and similarly you can breakup $Y$, Then $X\cdot Y=(X_L\cdot10^{n/2}+Xr)(Y_L\cdot10^{n/2}+Yr)$. Create pseudocode for a divide and conquer algorithm that achieves the above goal.
 > [!tldr] im not explaining allat
