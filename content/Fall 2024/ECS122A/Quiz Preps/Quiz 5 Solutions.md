@@ -90,7 +90,7 @@ cutRod(n, p[]):
 
 runtime of bruteforce is $O(2^n)$ cuz for every length of the rod, we can choose to cut or not cut. this doubles the number of possible combinations we must solve for, giving us $O(2^n)$
 ## b) What is the recurrence of this new problem  
-$opt(n)=\min\limits_{x\in[1\dots n]}\left(p[x]+opt(n-x)\right)$
+$opt(n)=\max\limits_{x\in[1\dots n]}\left(p[n],\; p[x]+opt(n-x)-3\right)$
 
 ## c) Create a DP algorithm for this new problem and state its run-time.
 pretty similar to the standard rod cutting problem, but now when we make our optimal cut table we must factor in the $3 fee. 
