@@ -6,7 +6,7 @@
 ![[Fall 2024/ECS122A/Quiz Preps/src/V-I.png| 300]]
 
 starting with **length 1**: 
-p[1] = 10. no other cuts to make, so we put these in our array
+p[1] = 10. no other cuts to make, so we put these in our array 
 
 | length           | 1   | 2   | 3   | 4   | 5   |
 | ---------------- | --- | --- | --- | --- | --- |
