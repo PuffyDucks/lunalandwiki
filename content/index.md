@@ -9,6 +9,7 @@ haiiiii hihihihi hiiiiii :3 haiiii hiii haiii ^-^ thanks for visiting my website
 - [[Fall 2024/ECS122A/Quiz Preps/Quiz 3 Solutions|Quiz 3 Solutions]]
 - [[Fall 2024/ECS122A/Quiz Preps/Quiz 4 Solutions|Quiz 4 Solutions]]
 - [[Fall 2024/ECS122A/Quiz Preps/Quiz 5 Solutions|Quiz 5 Solutions]]
+- [[Fall 2024/ECS122A/Quiz Preps/Quiz 6 Solutions|Quiz 6 Solutions]]
 
 # OK BORING STUFF OVER LOOK AT MY CAT
 
