@@ -15,7 +15,7 @@ p[1] = 10. no other cuts to make, so we put these in our array
 
 oke now **length 2**  
 cut size 1, p[1] + R[1] = 10 + 10 = 20  
-cut size 2, p[2] + 0 = 24  
+cut size 2, p[2] + R[0] = 24  
 **cut size 2** has highest price  
 
 | length           | 1   | 2   | 3   | 4   | 5   |
@@ -26,7 +26,7 @@ cut size 2, p[2] + 0 = 24
 **length 3**  
 cut size 1, p[1] + R[2] = 10 + 24 = 34  
 cut size 2, p[2] + R[1] = 24 + 10 = 34  
-cut size 3, p[3] + 0 = 30 + 0 = 30  
+cut size 3, p[3] + R[0] = 30 + 0 = 30  
 **cut size 1** is the smallest cut with the highest price
 
 | length           | 1   | 2   | 3   | 4   | 5   |
@@ -37,8 +37,8 @@ cut size 3, p[3] + 0 = 30 + 0 = 30
 **length 4**  
 cut size 1, p[1] + R[3] = 10 + 34 = 44  
 cut size 2, p[2] + R[2] = 24 + 24 = 48  
-cut size 2, p[3] + R[1] = 30 + 10 = 44  
-cut size 3, p[4] + 0 = 40 + 0 = 40  
+cut size 3, p[3] + R[1] = 30 + 10 = 44  
+cut size 4, p[4] + R[0] = 40 + 0 = 40  
 **cut size 2** has highest price  
 
 | length           | 1   | 2   | 3   | 4   | 5   |
@@ -51,7 +51,7 @@ cut size 1, p[1] + R[4] = 10 + 48 = 58
 cut size 2, p[2] + R[3] = 24 + 34 = 58  
 cut size 2, p[3] + R[2] = 34 + 24 = 58  
 cut size 2, p[4] + R[1] = 48 + 10 = 58  
-cut size 3, p[5] + 0 = 40 + 0 = 45  
+cut size 3, p[5] + R[0] = 40 + 0 = 45  
 **cut size 1** is the smallest cut with the highest price  
 
 | length           | 1   | 2   | 3   | 4   | 5   |
