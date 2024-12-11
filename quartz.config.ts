@@ -29,7 +29,7 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#24273a",
+          light: "#181825",
           lightgray: "#363a4f",
           gray: "#646464",
           darkgray: "#cad3f5",
@@ -40,7 +40,7 @@ const config: QuartzConfig = {
           textHighlight: "#eed49f",
         },
         darkMode: {
-          light: "#24273a",
+          light: "#181825",
           lightgray: "#363a4f",
           gray: "#646464",
           darkgray: "#cad3f5",
@@ -66,12 +66,13 @@ const config: QuartzConfig = {
         },
         keepBackground: true,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, enableCheckbox: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.HardLineBreaks(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

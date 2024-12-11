@@ -3,13 +3,7 @@ title: ☆ welcome to lunaland!!!!!!!!!!! ☆
 ---
 haiiiii hihihihi hiiiiii :3 haiiii hiii haiii ^-^ thanks for visiting my website :3 
 
-# ECS122A
-- [[Quiz 1 Solutions]]
-- [[Quiz 2 Solutions]]
-- [[Fall 2024/ECS122A/Quiz Preps/Quiz 3 Solutions|Quiz 3 Solutions]]
-- [[Fall 2024/ECS122A/Quiz Preps/Quiz 4 Solutions|Quiz 4 Solutions]]
-- [[Fall 2024/ECS122A/Quiz Preps/Quiz 5 Solutions|Quiz 5 Solutions]]
-- [[Fall 2024/ECS122A/Quiz Preps/Quiz 6 Solutions|Quiz 6 Solutions]]
+![[ECS122A/index]]
 
 # OK BORING STUFF OVER LOOK AT MY CAT
 

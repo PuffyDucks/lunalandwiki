@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fall 2024/ECS122A/Notes/Big O.md",
+                "file": "ECS122A/Notes/Big O.md",
                 "mode": "source",
                 "source": false
               }
@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fall 2024/ECS122A/Notes/Master Theorem.md",
+                "file": "ECS122A/Notes/Master Theorem.md",
                 "mode": "source",
                 "source": false
               }
@@ -59,7 +59,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Fall 2024/ECS122A/Quiz Preps/src/Pasted image 20241011032353.jpg"
+                "file": "ECS122A/Quiz Prep Solutions/src/Pasted image 20241011032353.jpg"
               }
             }
           }
@@ -233,11 +233,11 @@
     "Recipies",
     "Pasted image 20241011125258.png",
     "Pasted image 20241011125310.png",
-    "Fall 2024/ECS122A/Notes",
-    "Fall 2024/ECS122A/Quiz Preps/src",
-    "Fall 2024/ECS122A/Quiz Preps",
-    "Fall 2024/ECS175/Notes/src",
-    "Fall 2024/ECS122A/Notes/src",
-    "Fall 2024/ECS122A/Homework/src"
+    "ECS122A/Notes",
+    "ECS122A/Quiz Prep Solutions/src",
+    "ECS122A/Quiz Prep Solutions",
+    "ECS175/Notes/src",
+    "ECS122A/Notes/src",
+    "ECS122A/Homework/src"
   ]
 }
