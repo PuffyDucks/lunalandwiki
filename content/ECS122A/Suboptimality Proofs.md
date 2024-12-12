@@ -1,4 +1,4 @@
 ### Step 1: Name optimal solution  
-### Step 2: Name greedy strategy  
-### Step 3: Name greedy 1st choice, a1  
-### Step 4: Prove A = OPT - {O1} + {a1} is optimal   
+### Step 2: Name subproblem A = OPT - {O1}  
+### Step 3: Prove A is optimal  
+This can be done through 
