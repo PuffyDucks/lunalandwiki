@@ -2,7 +2,7 @@ Transistor current under saturation is dependent upon $v_{GS}$, thus making it a
 
 $v_o=v_{DS}=V_{DD}-i_DR_D$
 $v_{DS}=V_{DD}-\dfrac{1}{2}k_nR_D(v_{GS}-V_t)^2$
-![[01 School/01.01 Spring 2024/EEC111/Notes/src/Pasted image 20240430121017.png]]
+![[EEC111/Notes/src/Pasted image 20240430121017.png]]
 
 At saturation triode boundary
 $V_{GS}\biggr\vert_B=V_t+\dfrac{\sqrt{2k_nR_DV_{DD}+1}-1}{k_nR_D}$
@@ -24,8 +24,8 @@ Neglect nonlinear term with $v_{gs}\ll2V_{OV}$
 $g_m=k_nV_{OV}=\sqrt{2k_nI_D}=\dfrac{2I_D}{V_{OV}}$
 $A_v=-g_mR_D$
 $r_o=\dfrac{1}{\lambda I_D}$
-![[01 School/01.01 Spring 2024/EEC111/Notes/src/Pasted image 20240508212716.png]]
+![[EEC111/Notes/src/Pasted image 20240508212716.png]]
 
 ### Configurations
 Ground one of three terminals, creating two port network with common ground. Common-source most popular. 
-![[01 School/01.01 Spring 2024/EEC111/Notes/src/Pasted image 20240508212900.png | 800]]
+![[EEC111/Notes/src/Pasted image 20240508212900.png| 800]]

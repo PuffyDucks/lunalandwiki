@@ -1,4 +1,4 @@
-Linear amplifiers have an output which is an input scaled up by [[01 School/01.01 Spring 2024/EEC111/Notes/Gain Calculations|gain]], typically depicted with the equation $v_o=Av_i$. However, linearity can be limited by amplifier *saturation*. Meanwhile, nonlinear amplifiers experience distortion and are approximated with Taylor series. 
+Linear amplifiers have an output which is an input scaled up by [[EEC111/Notes/Gain Calculations|gain]], typically depicted with the equation $v_o=Av_i$. However, linearity can be limited by amplifier *saturation*. Meanwhile, nonlinear amplifiers experience distortion and are approximated with Taylor series. 
 # Amplifier Types
 Amplifiers are two port networks which can share a common ground.
 

@@ -6,7 +6,7 @@ aliases:
   - thermal equilibrium
   - intrinsic carrier concentration
 ---
-In a silicon crystal lattice, each silicon atom forms 4 covalent bonds with 4 other silicon atoms. At low temperatures, there are no free electrons, making the silicon an insulator. At higher temperatures, the increase in energy causes covalent bonds to break, resulting in negatively charged free electrons and positively charged *holes*. Holes and electrons are capable of movement, which makes them capable of conducting current. The properties of a silicon crystal can be modified through the process of [[01 School/01.01 Spring 2024/EEC111/Notes/Doping Semiconductors|doping]].
+In a silicon crystal lattice, each silicon atom forms 4 covalent bonds with 4 other silicon atoms. At low temperatures, there are no free electrons, making the silicon an insulator. At higher temperatures, the increase in energy causes covalent bonds to break, resulting in negatively charged free electrons and positively charged *holes*. Holes and electrons are capable of movement, which makes them capable of conducting current. The properties of a silicon crystal can be modified through the process of [[EEC111/Notes/Doping Semiconductors|doping]].
 ### Recombination 
 Recombination is when electrons "fill" holes back in. The recombination rate is proportional to the number of carriers, which depends on thermal generation, which strongly depends on temperature. 
 ### Thermal Equilibrium
