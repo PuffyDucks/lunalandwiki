@@ -52,7 +52,7 @@ $$
 
 **Transfer Function:**
 $$
-H(z)=1-z^{-1}=\dfrac{z+1}{z}
+H(z)=1-z^{-1}=\dfrac{z-1}{z}
 $$
 
 > [!example] Cascaded First-Difference Filters Example
@@ -62,9 +62,9 @@ $$
 > $$
 > H(z)=(1-z^{-1})^3=1-3z^{-1}+3z^{-2}-z^{-3}
 > $$
-> Alternatively, if we represent the first-difference filter transfer function as $H_1(z)=\dfrac{z+1}{z}$, then:
+> Alternatively, if we represent the first-difference filter transfer function as $H_1(z)=\dfrac{z-1}{z}$, then:
 > $$
-> H(z)=\left(\dfrac{z+1}{z}\right)^3=\dfrac{(z+1)^3}{z^3}
+> H(z)=\left(\dfrac{z-1}{z}\right)^3=\dfrac{(z-1)^3}{z^3}
 > $$
 > This fraction form makes it easier to find the zeroes and pole of the filter. 
 
@@ -122,7 +122,7 @@ $$
 > \end{align*}
 > $$
 > This can be rewritten using partial fraction decomposition:
-> > [!FAQ]- Partial Fraction Decomposition Review!
+> > [!FAQ]+ Partial Fraction Decomposition Review!
 > > We want to rewrite the fraction as a sum:
 > > $$
 > > \begin{align*}
