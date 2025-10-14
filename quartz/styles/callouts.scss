@@ -56,9 +56,9 @@
   }
 
   &[data-callout="tip"] {
-    --color: #00bfa5;
-    --border: #00bfa544;
-    --bg: #00bfa510;
+    --color: #94e2d5;
+    --border: none;
+    --bg: #94e2d51a;
     --callout-icon: var(--callout-icon-tip);
   }
 
@@ -70,9 +70,9 @@
   }
 
   &[data-callout="question"] {
-    --color: #dba642;
-    --border: #dba64244;
-    --bg: #dba64210;
+    --color: #fab387;
+    --border: none;
+    --bg: #fab3871a;
     --callout-icon: var(--callout-icon-question);
   }
 
@@ -101,9 +101,9 @@
   }
 
   &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
+    --color: #b4befe;
+    --border: none;
+    --bg: #b4befe1a;
     --callout-icon: var(--callout-icon-example);
   }
 
